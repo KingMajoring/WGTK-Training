@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: 'Barlow Condensed', Impact, system-ui, sans-serif;
+}
+
+/* Progress bar animation */
+@keyframes fill-bar {
+  from { width: 0; }
+}
+
+.animate-fill {
+  animation: fill-bar 0.8s ease-out forwards;
+}
+
+/* Quiz option hover */
+.quiz-option {
+  transition: all 0.15s ease;
+}
+.quiz-option:hover:not(:disabled) {
+  border-color: #F15A22;
+  background: rgba(241, 90, 34, 0.08);
+}
+.quiz-option.correct {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+.quiz-option.wrong {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Pulse for XP */
+@keyframes xp-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.xp-pop {
+  animation: xp-pop 0.4s ease;
+}
+
+/* Slide in */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slide-up {
+  animation: slide-up 0.3s ease forwards;
+}

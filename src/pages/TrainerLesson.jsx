@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { getLessonById, lessons } from '../data/lessons'
 import { useState, useEffect, useCallback } from 'react'
+import WGTKLogo from '../components/WGTKLogo'
 
 // Build slides from lesson data
 function buildSlides(lesson) {
@@ -161,6 +162,10 @@ export default function TrainerLesson() {
         className="flex-1 flex items-center justify-center px-12 py-8 cursor-pointer relative"
         onClick={next}
       >
+        {/* Logo watermark — bottom right every slide */}
+        <div className="absolute bottom-4 right-6 opacity-60 pointer-events-none">
+          <WGTKLogo size="sm" />
+        </div>
         <SlideContent
           slide={slide}
           subStep={subStep}
@@ -241,7 +246,9 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
     case 'title':
       return (
         <div className="text-center max-w-4xl mx-auto slide-up">
-          <div className="text-8xl mb-8">{slide.lesson.icon}</div>
+          <div className="flex justify-center mb-8">
+            <WGTKLogo size="xl" />
+          </div>
           <div className="text-brand font-display text-lg tracking-widest uppercase mb-4">{slide.lesson.category}</div>
           <h1 className="font-display text-7xl md:text-8xl font-black uppercase text-white leading-none mb-6">
             {slide.lesson.title}

@@ -1,18 +1,15 @@
-export default function WGTKLogo({ size = 'md' }) {
+export default function WGTKLogo({ size = 'md', className = '' }) {
   const sizes = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-3xl',
+    sm: 'h-10',
+    md: 'h-14',
+    lg: 'h-20',
+    xl: 'h-28',
   }
   return (
-    <div className={`font-display font-black uppercase leading-none ${sizes[size]}`}>
-      <span className="text-white">WE'VE G</span>
-      <span className="text-brand">O</span>
-      <span className="text-white">T</span>
-      <br />
-      <span className="text-white">THE </span>
-      <span className="text-brand">KEY</span>
-      <div className="text-[0.45em] tracking-widest text-gray-500 mt-0.5">AUTO LOCKSMITHS</div>
-    </div>
+    <img
+      src="/WGTK-Training/wgtk-logo.svg"
+      alt="We've Got The Key — Auto Locksmiths"
+      className={`${sizes[size]} w-auto object-contain ${className}`}
+    />
   )
 }

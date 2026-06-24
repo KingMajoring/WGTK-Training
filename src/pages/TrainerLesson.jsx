@@ -244,6 +244,36 @@ export default function TrainerLesson() {
   )
 }
 
+function StatsSlide({ slide }) {
+  const [active, setActive] = useState(null)
+  return (
+    <div className="max-w-5xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+      <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">Key Numbers</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {slide.stats.map((s, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(active === i ? null : i)}
+            className={`rounded-2xl p-8 text-center transition-all duration-200 border ${active === i ? 'bg-brand border-brand' : 'bg-surface-3 border-surface-5 hover:border-brand/50'}`}
+          >
+            <div className={`font-display text-5xl font-black mb-3 ${active === i ? 'text-white' : 'text-brand'}`}>{s.value}</div>
+            <div className={`text-lg uppercase tracking-wider font-display ${active === i ? 'text-white' : 'text-gray-300'}`}>{s.label}</div>
+            <div className={`text-xs mt-2 font-display uppercase tracking-wider ${active === i ? 'text-white/70' : 'text-gray-600'}`}>
+              {active === i ? 'click to close' : 'click for info'}
+            </div>
+          </button>
+        ))}
+      </div>
+      {active !== null && (
+        <div className="mt-6 bg-surface-3 border border-brand/30 rounded-2xl p-6 slide-up">
+          <div className="text-brand font-display text-sm uppercase tracking-widest mb-2">{slide.stats[active].label}</div>
+          <p className="text-white text-xl leading-relaxed">{slide.stats[active].detail}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLesson, onNextLesson, nextLesson }) {
   switch (slide.type) {
 
@@ -293,17 +323,7 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
 
     case 'stats':
       return (
-        <div className="max-w-5xl w-full mx-auto slide-up">
-          <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">Key Numbers</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {slide.stats.map((s, i) => (
-              <div key={i} className="bg-surface-3 border border-surface-5 rounded-2xl p-8 text-center">
-                <div className="font-display text-6xl font-black text-brand mb-3">{s.value}</div>
-                <div className="text-gray-300 text-xl uppercase tracking-wider font-display">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <StatsSlide slide={slide} />
       )
 
     case 'services': {

@@ -10,7 +10,7 @@ export default function WGTKLogo({ size = 'md', className = '' }) {
       src="/WGTK-Training/logo-wgt.png"
       alt="We've Got The Key — Auto Locksmiths"
       className={`${sizes[size]} h-auto object-contain ${className}`}
-      style={{  }}
+      style={{ mixBlendMode: 'screen' }}
     />
   )
 }

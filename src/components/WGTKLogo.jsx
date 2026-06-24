@@ -7,7 +7,7 @@ export default function WGTKLogo({ size = 'md', className = '' }) {
   }
   return (
     <img
-      src="/WGTK-Training/logo.png"
+      src="/WGTK-Training/logo-v5.png"
       alt="We've Got The Key — Auto Locksmiths"
       className={`${sizes[size]} h-auto object-contain ${className}`}
     />

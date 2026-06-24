@@ -12,6 +12,9 @@ function buildSlides(lesson) {
 
   // Content slides
   lesson.content.forEach(block => {
+    if (block.type === 'agenda') {
+      slides.push({ type: 'agenda', heading: block.heading, items: block.items })
+    }
     if (block.type === 'intro') {
       slides.push({ type: 'intro', text: block.text })
     }
@@ -68,6 +71,7 @@ export default function TrainerLesson() {
   function getMaxSubSteps(slide) {
     if (slide?.type === 'services') return slide.services.length * 2 - 1
     if (slide?.type === 'timeline') return slide.events.length - 1
+    if (slide?.type === 'agenda') return slide.items.length - 1
     return 0
   }
 
@@ -295,6 +299,32 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           </div>
         </div>
       )
+
+    case 'agenda': {
+      const visibleItems = slide.items.slice(0, subStep + 1)
+      return (
+        <div className="max-w-5xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-8">{slide.heading}</div>
+          <div className="space-y-5">
+            {visibleItems.map((item, i) => (
+              <div key={i} className="flex items-start gap-6 bg-surface-3 border border-surface-5 rounded-2xl px-6 py-5 slide-up">
+                <div className="text-4xl flex-shrink-0">{item.icon}</div>
+                <div className="flex-1">
+                  <div className="font-display text-2xl font-black uppercase text-white leading-tight">{item.title}</div>
+                  <p className="text-gray-300 text-lg mt-1">{item.desc}</p>
+                  {item.note && (
+                    <div className="mt-2 text-brand text-sm font-display uppercase tracking-wider">⚠ {item.note}</div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-gray-600 text-sm font-display uppercase tracking-wider">
+            {subStep < slide.items.length - 1 ? 'Click or → to continue' : ''}
+          </div>
+        </div>
+      )
+    }
 
     case 'intro':
       return (

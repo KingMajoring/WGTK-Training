@@ -23,6 +23,33 @@ export const lessons = [
     ],
     content: [
       {
+        type: 'agenda',
+        heading: "Today's Training",
+        items: [
+          {
+            icon: '🗺️',
+            title: 'Office Tour',
+            desc: 'We\'ll start with a walk around the building — fire exits, facilities, who sits where.',
+            note: 'Physical tour — pause here and take the group around the office before continuing.',
+          },
+          {
+            icon: '📋',
+            title: 'What Training Looks Like',
+            desc: 'A mix of classroom sessions, real scenarios and quizzes. We\'ll go through each module together — no rushing.',
+          },
+          {
+            icon: '⭐',
+            title: 'What We Expect From You',
+            desc: 'Be present, ask questions, and be honest about what you don\'t know. There are no silly questions here — we\'d rather you ask than guess.',
+          },
+          {
+            icon: '🔑',
+            title: 'WGTK Business Overview',
+            desc: 'Then we\'ll dive into who we are, what we do, and where we\'ve come from.',
+          },
+        ],
+      },
+      {
         type: 'intro',
         text: 'WGTK (We\'ve Got The Key) is a specialist mobile auto locksmith network. We solve key problems on-site, faster and cheaper than main dealers.',
       },

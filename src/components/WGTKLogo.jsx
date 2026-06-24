@@ -1,9 +1,9 @@
 export default function WGTKLogo({ size = 'md', className = '' }) {
   const sizes = {
-    sm: 'w-32',
-    md: 'w-44',
-    lg: 'w-56',
-    xl: 'w-80',
+    sm: 'w-36',
+    md: 'w-48',
+    lg: 'w-64',
+    xl: 'w-96',
   }
   return (
     <img

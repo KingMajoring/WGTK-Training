@@ -7,7 +7,7 @@ import TraineeLesson from './pages/TraineeLesson'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/WGTK-Training">
       <Routes>
         <Route path="/" element={<RoleSelect />} />
         <Route path="/trainer" element={<TrainerDashboard />} />

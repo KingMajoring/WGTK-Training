@@ -15,7 +15,6 @@ function buildSlides(lesson) {
       slides.push({ type: 'intro', text: block.text })
     }
     if (block.type === 'keypoints') {
-      // Split into groups of 3 points per slide
       const chunks = []
       for (let i = 0; i < block.points.length; i += 3) {
         chunks.push(block.points.slice(i, i + 3))
@@ -27,6 +26,9 @@ function buildSlides(lesson) {
           points: chunk,
         })
       })
+    }
+    if (block.type === 'services') {
+      slides.push({ type: 'services', heading: block.heading, services: block.services })
     }
     if (block.type === 'stat-row') {
       slides.push({ type: 'stats', stats: block.stats })
@@ -54,15 +56,33 @@ export default function TrainerLesson() {
 
   const slides = lesson ? buildSlides(lesson) : []
   const [current, setCurrent] = useState(0)
+  const [subStep, setSubStep] = useState(0)
   const [revealed, setRevealed] = useState({}) // quiz answer reveals
   const [showNotes, setShowNotes] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
 
-  const prev = useCallback(() => setCurrent(c => Math.max(0, c - 1)), [])
+  function getMaxSubSteps(slide) {
+    if (slide?.type === 'services') return slide.services.length * 2 - 1
+    return 0
+  }
+
+  const prev = useCallback(() => {
+    if (subStep > 0) { setSubStep(0); return }
+    setCurrent(c => Math.max(0, c - 1))
+    setSubStep(0)
+  }, [subStep])
+
   const next = useCallback(() => {
+    const slide = slides[current]
+    const maxSub = getMaxSubSteps(slide)
+    if (subStep < maxSub) {
+      setSubStep(s => s + 1)
+      return
+    }
     setCurrent(c => Math.min(slides.length - 1, c + 1))
+    setSubStep(0)
     setShowNotes(false)
-  }, [slides.length])
+  }, [slides, current, subStep])
 
   useEffect(() => {
     function onKey(e) {
@@ -143,11 +163,12 @@ export default function TrainerLesson() {
       >
         <SlideContent
           slide={slide}
+          subStep={subStep}
           revealed={revealed}
           toggleReveal={toggleReveal}
           lesson={lesson}
-          onPrevLesson={prevLesson ? () => { navigate(`/trainer/lesson/${prevLesson.id}`); setCurrent(0) } : null}
-          onNextLesson={nextLesson ? () => { navigate(`/trainer/lesson/${nextLesson.id}`); setCurrent(0) } : null}
+          onPrevLesson={prevLesson ? () => { navigate(`/trainer/lesson/${prevLesson.id}`); setCurrent(0); setSubStep(0) } : null}
+          onNextLesson={nextLesson ? () => { navigate(`/trainer/lesson/${nextLesson.id}`); setCurrent(0); setSubStep(0) } : null}
           nextLesson={nextLesson}
         />
 
@@ -214,7 +235,7 @@ export default function TrainerLesson() {
   )
 }
 
-function SlideContent({ slide, revealed, toggleReveal, lesson, onPrevLesson, onNextLesson, nextLesson }) {
+function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLesson, onNextLesson, nextLesson }) {
   switch (slide.type) {
 
     case 'title':
@@ -273,6 +294,33 @@ function SlideContent({ slide, revealed, toggleReveal, lesson, onPrevLesson, onN
           </div>
         </div>
       )
+
+    case 'services': {
+      // subStep: 0 = first service name only, 1 = first + desc, 2 = second name, 3 = second + desc...
+      const visibleCount = Math.floor(subStep / 2) + 1
+      const descRevealed = (i) => subStep >= i * 2 + 1
+      return (
+        <div className="max-w-5xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-8">{slide.heading}</div>
+          <div className="space-y-5">
+            {slide.services.slice(0, visibleCount).map((svc, i) => (
+              <div key={i} className="border-l-4 border-brand pl-6">
+                <div className="font-display text-4xl md:text-5xl font-black uppercase text-white leading-none">
+                  {svc.name}
+                </div>
+                {descRevealed(i) && (
+                  <p className="text-gray-300 text-xl mt-2 slide-up">{svc.desc}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          {/* Click hint */}
+          <div className="mt-8 text-gray-600 text-sm font-display uppercase tracking-wider">
+            {subStep < slide.services.length * 2 - 1 ? 'Click or → to continue' : ''}
+          </div>
+        </div>
+      )
+    }
 
     case 'cheatsheet':
       return (

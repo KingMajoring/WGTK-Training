@@ -27,15 +27,29 @@ export const lessons = [
         text: 'WGTK (We\'ve Got The Key) is a specialist mobile auto locksmith network. We solve key problems on-site, faster and cheaper than main dealers.',
       },
       {
-        type: 'keypoints',
+        type: 'services',
         heading: 'The Core Offer',
-        points: [
-          'Key replacement — cut & coded on-site, all makes & models',
-          'Key programming — remotes & transponders, no dealership wait',
-          'Key deletion — lost/stolen keys wiped from the vehicle',
-          'Lockset replacement — full lock supply and fitting',
-          'Damage-free entry — cleared in minutes, zero damage',
-          'Priority call-out — 365 days, jobs that can\'t wait',
+        services: [
+          {
+            name: 'All Keys Lost',
+            desc: "We cut and code a brand new key on-site, getting the vehicle moving again. We're able to make keys even without a spare key to work from.",
+          },
+          {
+            name: 'Spare Keys',
+            desc: 'A duplicate key cut and programmed to the vehicle — ideal as a backup or for fleet management.',
+          },
+          {
+            name: 'Gain Access',
+            desc: 'We open the vehicle damage-free when keys are locked inside, in minutes.',
+          },
+          {
+            name: 'Ignition & Door Barrels',
+            desc: 'We replace ignition barrels and door locks where keys are lost or the lock is compromised.',
+          },
+          {
+            name: 'Key Deletion',
+            desc: "Lost or stolen keys are wiped from the vehicle's memory so they can never be used to start it again.",
+          },
         ],
       },
       {

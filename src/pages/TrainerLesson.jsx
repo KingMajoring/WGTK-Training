@@ -34,6 +34,9 @@ function buildSlides(lesson) {
     if (block.type === 'stat-row') {
       slides.push({ type: 'stats', stats: block.stats })
     }
+    if (block.type === 'timeline') {
+      slides.push({ type: 'timeline', heading: block.heading, events: block.events })
+    }
   })
 
   // Cheat sheet slide
@@ -64,6 +67,7 @@ export default function TrainerLesson() {
 
   function getMaxSubSteps(slide) {
     if (slide?.type === 'services') return slide.services.length * 2 - 1
+    if (slide?.type === 'timeline') return slide.events.length - 1
     return 0
   }
 
@@ -324,6 +328,39 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           {/* Click hint */}
           <div className="mt-8 text-gray-600 text-sm font-display uppercase tracking-wider">
             {subStep < slide.services.length * 2 - 1 ? 'Click or → to continue' : ''}
+          </div>
+        </div>
+      )
+    }
+
+    case 'timeline': {
+      const visibleEvents = slide.events.slice(0, subStep + 1)
+      return (
+        <div className="max-w-5xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-8">{slide.heading}</div>
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-16 top-0 bottom-0 w-px bg-surface-5" />
+            <div className="space-y-6">
+              {visibleEvents.map((ev, i) => (
+                <div key={i} className="flex items-start gap-6 slide-up">
+                  {/* Year badge */}
+                  <div className={`w-32 flex-shrink-0 text-right font-display font-black text-lg leading-tight pt-0.5 ${ev.year === 'Today' ? 'text-brand' : 'text-gray-400'}`}>
+                    {ev.year}
+                  </div>
+                  {/* Dot */}
+                  <div className={`relative z-10 w-3 h-3 rounded-full flex-shrink-0 mt-1.5 ${ev.year === 'Today' ? 'bg-brand ring-4 ring-brand/20' : 'bg-surface-5'}`} />
+                  {/* Content */}
+                  <div className="flex-1 pb-2">
+                    <div className={`font-display text-2xl font-black uppercase leading-tight ${ev.year === 'Today' ? 'text-brand' : 'text-white'}`}>{ev.title}</div>
+                    <p className="text-gray-400 text-base mt-1 leading-relaxed">{ev.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 text-gray-600 text-sm font-display uppercase tracking-wider">
+            {subStep < slide.events.length - 1 ? 'Click or → to continue' : ''}
           </div>
         </div>
       )

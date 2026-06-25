@@ -210,7 +210,7 @@ export const lessons = [
       },
       {
         type: 'scenario',
-        quote: 'A customer calls having found us online. They\'re on the hard shoulder of the M6 — all keys lost, baby in the car.',
+        quote: 'A customer calls having found us online. They\'re stuck in a supermarket car park — all keys lost, baby in the car.',
         answer: 'Retail — high stress, roadside. Speed and reassurance are everything. This is exactly the enquiry our Google Ads spend is generating.',
       },
       {

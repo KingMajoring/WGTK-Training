@@ -7,9 +7,6 @@ import WGTKLogo from '../components/WGTKLogo'
 function buildSlides(lesson) {
   const slides = []
 
-  // Slide 1: Title
-  slides.push({ type: 'title', lesson })
-
   // Content slides
   lesson.content.forEach(block => {
     if (block.type === 'agenda') {
@@ -488,14 +485,7 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
         <div className="max-w-4xl w-full mx-auto slide-up">
           <div className="text-brand font-display text-lg tracking-widest uppercase mb-6">Activity</div>
           <h2 className="font-display text-6xl font-black uppercase text-white leading-none mb-8">{slide.heading}</h2>
-          <p className="text-white text-3xl leading-snug mb-8">{slide.instruction}</p>
-          <div className="bg-surface-3 border border-brand/30 rounded-2xl px-8 py-5 mb-6">
-            <div className="text-brand font-display text-xs uppercase tracking-widest mb-2">Trainer goes first</div>
-            <p className="text-gray-300 text-xl">{slide.trainerFirst}</p>
-          </div>
-          {slide.tip && (
-            <div className="text-brand font-display text-sm uppercase tracking-widest">⚡ {slide.tip}</div>
-          )}
+          <p className="text-white text-3xl leading-snug">{slide.instruction}</p>
         </div>
       )
 

@@ -85,7 +85,7 @@ export default function TrainerDashboard() {
 
               <div className="flex items-center gap-3 text-xs text-gray-500">
                 <span>⏱ {lesson.duration}</span>
-                <span>❓ {lesson.quiz.length} Qs</span>
+                {lesson.quiz.length > 0 && <span>❓ {lesson.quiz.length} Qs</span>}
               </div>
 
               {/* Present button */}

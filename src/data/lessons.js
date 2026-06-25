@@ -109,7 +109,7 @@ export const lessons = [
     trainerNotes: [
       'Keep the energy warm and relaxed — this sets the tone for everything that follows.',
       'Don\'t rush. If they\'re still chatting or settling in, let it happen. Tense people don\'t learn.',
-      'Do the Two Truths and a Lie yourself first — it shows you\'re human and breaks the ice faster.',
+      'TWO TRUTHS AND A LIE — Trainer goes first. Share: your name, your role, what you do day-to-day, how long you\'ve been at WGTK, and one surprising fact about yourself. This breaks the awkwardness instantly.',
       'When they share their goal, write it down visibly. It tells them you\'re listening and you\'ll hold them to it.',
     ],
     cheatSheet: [
@@ -164,23 +164,7 @@ export const lessons = [
         note: 'Write their answers down — it makes them feel heard.',
       },
     ],
-    quiz: [
-      {
-        question: 'What is the main purpose of the Welcome & Introductions session?',
-        options: ['To test their product knowledge', 'To make them feel welcomed, relaxed and part of the team', 'To explain the commission structure', 'To set up their computer login'],
-        answer: 1,
-      },
-      {
-        question: 'What does Week 2 of training focus on?',
-        options: ['Classroom sessions only', 'Exams and assessments', 'Supported live calls', 'Solo unsupervised calls'],
-        answer: 2,
-      },
-      {
-        question: 'If a new starter makes a mistake on a call, what should they do?',
-        options: ['Say nothing and hope no one notices', 'Tell the team so they can help', 'Handle it alone to prove themselves', 'Hang up and start again'],
-        answer: 1,
-      },
-    ],
+    quiz: [],
   },
 ];
 

@@ -117,7 +117,7 @@ export default function RoleSelect() {
       </div>
 
       <div className="text-center pb-8 text-gray-500 text-xs">
-        WE'VE GOT THE KEY — AUTO LOCKSMITHS &nbsp;·&nbsp; <span className="text-brand font-bold">v3.8</span>
+        WE'VE GOT THE KEY — AUTO LOCKSMITHS &nbsp;·&nbsp; <span className="text-brand font-bold">v3.9</span>
       </div>
     </div>
   )

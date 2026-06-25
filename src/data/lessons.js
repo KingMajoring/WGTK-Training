@@ -188,15 +188,10 @@ export const lessons = [
         ],
       },
       {
-        type: 'activity',
-        heading: 'Steering Locks',
-        instruction: 'Some vehicles have a steering lock built into the ignition barrel housing — when it fails, the car won\'t start at all.',
-      },
-      {
         type: 'services',
         heading: 'Security & Lockset',
         services: [
-          { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged or all keys are lost and a barrel replacement is needed.' },
+          { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged, all keys are lost, or — especially on VAG group vehicles — the electronic steering lock built into the barrel housing fails and the car won\'t start.' },
           { name: 'Door Barrel Replacement', desc: 'We replace door lock cylinders — often needed when a key breaks inside or the barrel is worn.' },
         ],
       },

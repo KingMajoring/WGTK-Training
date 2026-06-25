@@ -32,11 +32,6 @@ export const lessons = [
         type: 'big-question',
         question: 'What\'s one thing you\'re hoping to get good at in this job?',
       },
-      {
-        type: 'activity',
-        heading: 'Meet the Team',
-        instruction: 'You\'ll get a sheet with questions about your new colleagues. Go and find the answers — but you must introduce yourself before anyone answers anything.',
-      },
     ],
     quiz: [],
   },
@@ -319,6 +314,30 @@ export const lessons = [
         answer: 1,
       },
     ],
+  },
+  {
+    id: 4,
+    title: 'Meet the Team',
+    subtitle: 'Get to know the people around you',
+    category: 'Foundation',
+    duration: '20 min',
+    xp: 60,
+    icon: '🤝',
+    trainerNotes: [
+      'Print one question sheet per trainee before the session.',
+      'Explain the rule clearly before they start: they must introduce themselves fully before anyone will answer a question.',
+      'Give them 10–15 minutes to move around the office.',
+      'Bring everyone back together at the end — ask: who did you speak to? Did anything surprise you?',
+    ],
+    cheatSheet: [],
+    content: [
+      {
+        type: 'activity',
+        heading: 'Meet the Team',
+        instruction: 'You\'ll get a sheet with questions about your new colleagues. Go and find the answers — but you must introduce yourself before anyone answers anything.',
+      },
+    ],
+    quiz: [],
   },
 ];
 

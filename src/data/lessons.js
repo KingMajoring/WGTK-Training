@@ -288,7 +288,12 @@ export const lessons = [
           'Postcodes can easily be misheard: BR1 and PR1, DE1 and PE1, FY1 and SY1',
           'A wrong postcode could send the engineer miles in the wrong direction',
           'Repeat it back: "So that\'s [full postcode] — can you confirm that for me?"',
+          'Use the phonetic alphabet to spell it back if there\'s any doubt',
         ],
+      },
+      {
+        type: 'phonetic',
+        heading: 'The Phonetic Alphabet',
       },
     ],
     quiz: [

@@ -55,6 +55,9 @@ function buildSlides(lesson) {
     if (block.type === 'flipcards') {
       slides.push({ type: 'flipcards', heading: block.heading, instruction: block.instruction, cards: block.cards, consequence: block.consequence })
     }
+    if (block.type === 'phonetic') {
+      slides.push({ type: 'phonetic', heading: block.heading })
+    }
     if (block.type === 'break') {
       slides.push({ type: 'break', heading: block.heading, duration: block.duration })
     }
@@ -324,6 +327,66 @@ function QuizSlide({ slide }) {
           ✓ Correct!
         </div>
       )}
+    </div>
+  )
+}
+
+const PHONETIC = [
+  ['A', 'Alpha'], ['B', 'Bravo'], ['C', 'Charlie'], ['D', 'Delta'],
+  ['E', 'Echo'], ['F', 'Foxtrot'], ['G', 'Golf'], ['H', 'Hotel'],
+  ['I', 'India'], ['J', 'Juliet'], ['K', 'Kilo'], ['L', 'Lima'],
+  ['M', 'Mike'], ['N', 'November'], ['O', 'Oscar'], ['P', 'Papa'],
+  ['Q', 'Quebec'], ['R', 'Romeo'], ['S', 'Sierra'], ['T', 'Tango'],
+  ['U', 'Uniform'], ['V', 'Victor'], ['W', 'Whiskey'], ['X', 'X-ray'],
+  ['Y', 'Yankee'], ['Z', 'Zulu'],
+]
+
+function PhoneticSlide({ slide }) {
+  const [revealed, setRevealed] = useState([])
+  const allDone = revealed.length === PHONETIC.length
+
+  function toggle(i) {
+    setRevealed(r => r.includes(i) ? r.filter(x => x !== i) : [...r, i])
+  }
+
+  function revealAll() {
+    setRevealed(PHONETIC.map((_, i) => i))
+  }
+
+  return (
+    <div className="max-w-6xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+      <div className="flex items-center justify-between mb-6">
+        <div className="text-brand font-display text-lg tracking-widest uppercase">{slide.heading}</div>
+        {!allDone && (
+          <button
+            onClick={revealAll}
+            className="font-display text-xs uppercase tracking-wider px-4 py-2 rounded-lg border border-surface-5 text-gray-400 hover:border-brand hover:text-white transition-all"
+          >
+            Reveal All
+          </button>
+        )}
+      </div>
+      <div className="grid grid-cols-6 md:grid-cols-9 gap-2">
+        {PHONETIC.map(([letter, word], i) => {
+          const isRevealed = revealed.includes(i)
+          return (
+            <button
+              key={i}
+              onClick={() => toggle(i)}
+              className={`rounded-xl p-2 text-center transition-all duration-200 border ${
+                isRevealed
+                  ? 'bg-brand/10 border-brand/40'
+                  : 'bg-surface-3 border-surface-5 hover:border-brand/40'
+              }`}
+            >
+              <div className={`font-display text-xl font-black ${isRevealed ? 'text-brand' : 'text-white'}`}>{letter}</div>
+              {isRevealed && (
+                <div className="text-gray-300 text-xs leading-tight mt-0.5">{word}</div>
+              )}
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
@@ -624,6 +687,9 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           </div>
         </div>
       )
+
+    case 'phonetic':
+      return <PhoneticSlide slide={slide} />
 
     case 'flipcards':
       return <FlipCardsSlide slide={slide} />

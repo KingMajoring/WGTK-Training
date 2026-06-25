@@ -146,6 +146,7 @@ export const lessons = [
       'WARM-UP: Use whiteboard for both opening questions. Encourage trainees to make notes. Let them talk freely — don\'t correct yet, just capture.',
       'Start with the warm-up discussion — let them talk first, then correct and frame it.',
       'GAIN ACCESS DEMO: Show the tools — long rod, airbag/wedge, picks. Demonstrate on a vehicle or door if available. Key points: no damage to bodywork or locks, faster than a dealer, fully insured.',
+      'KEY TYPES DEMO: Pass samples around. Fixed blade — traditional cut key, older vehicles. Transponder — blade with chip inside, must be coded to the immobiliser. Remote types: Flip key (blade folds into remote fob), Fixed remote (one piece, blade + buttons), Dash insert (remote slides into a slot on the dash), Proximity/Smart key (no blade, push-button start, just needs to be near the car).',
       'When you get to key types, pass the samples around. Let them handle them.',
       'The "Customer Says" table is a great exercise — ask them to guess what the customer actually means before revealing it.',
       'For scenarios, read them out slowly. Give trainees time to think before they answer.',
@@ -174,13 +175,9 @@ export const lessons = [
         instruction: 'How do you think we open a car when the keys are locked inside?',
       },
       {
-        type: 'services',
-        heading: 'Replacement Keys',
-        services: [
-          { name: 'All Keys Lost', desc: 'We cut and programme a brand new key on-site — even with no working key to copy from. Vehicle is back on the road the same day.' },
-          { name: 'Spare Key', desc: 'A duplicate key cut and programmed to the vehicle. Ideal as a backup or for fleet management.' },
-          { name: 'Key Deletion', desc: 'Lost or stolen keys are wiped from the vehicle\'s memory so they can never start it again. Often combined with All Keys Lost.' },
-        ],
+        type: 'activity',
+        heading: 'Key Types',
+        instruction: 'Can you name the different types of keys we might be asked to replace?',
       },
       {
         type: 'services',
@@ -188,17 +185,6 @@ export const lessons = [
         services: [
           { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged or all keys are lost and a barrel replacement is needed.' },
           { name: 'Door Barrel Replacement', desc: 'We replace door lock cylinders — often needed when a key breaks inside or the barrel is worn.' },
-        ],
-      },
-      {
-        type: 'keypoints',
-        heading: 'Key Types',
-        points: [
-          'Blade Key — traditional cut key, older vehicles, no chip',
-          'Transponder Key — blade + chip inside, must be coded to vehicle immobiliser',
-          'Remote Key — transponder + remote locking buttons combined',
-          'Flip / Folding Key — blade folds into a remote fob housing',
-          'Smart Key / Proximity Key — no blade, push-button start, must be near vehicle to start',
         ],
       },
       {

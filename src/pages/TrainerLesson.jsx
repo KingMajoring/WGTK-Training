@@ -52,6 +52,9 @@ function buildSlides(lesson) {
     if (block.type === 'scenario') {
       slides.push({ type: 'scenario', quote: block.quote, answer: block.answer })
     }
+    if (block.type === 'flipcards') {
+      slides.push({ type: 'flipcards', heading: block.heading, instruction: block.instruction, cards: block.cards, consequence: block.consequence })
+    }
     if (block.type === 'break') {
       slides.push({ type: 'break', heading: block.heading, duration: block.duration })
     }
@@ -325,6 +328,55 @@ function QuizSlide({ slide }) {
   )
 }
 
+function FlipCardsSlide({ slide }) {
+  const [flipped, setFlipped] = useState([])
+  const allFlipped = flipped.length === slide.cards.length
+
+  function toggle(i) {
+    setFlipped(f => f.includes(i) ? f.filter(x => x !== i) : [...f, i])
+  }
+
+  return (
+    <div className="max-w-5xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+      <div className="text-brand font-display text-lg tracking-widest uppercase mb-3">Common Mistake</div>
+      <h2 className="font-display text-3xl font-black uppercase text-white leading-tight mb-2">{slide.heading}</h2>
+      <p className="text-gray-400 text-lg mb-8">{slide.instruction}</p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        {slide.cards.map((card, i) => {
+          const isFlipped = flipped.includes(i)
+          return (
+            <button
+              key={i}
+              onClick={() => toggle(i)}
+              className={`relative rounded-2xl p-6 text-left transition-all duration-300 border min-h-36 flex flex-col justify-between ${
+                isFlipped
+                  ? 'bg-brand border-brand'
+                  : 'bg-surface-3 border-surface-5 hover:border-brand/50'
+              }`}
+            >
+              {/* Trainer hint — subtle, small */}
+              {!isFlipped && (
+                <span className="text-gray-700 text-xs font-display uppercase tracking-wider">{card.hint}</span>
+              )}
+              {isFlipped ? (
+                <p className="text-white font-display text-lg font-bold leading-snug">{card.answer}</p>
+              ) : (
+                <div className="text-brand/30 font-display text-5xl font-black self-end">{i + 1}</div>
+              )}
+            </button>
+          )
+        })}
+      </div>
+      {allFlipped && slide.consequence && (
+        <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-6 py-4 slide-up">
+          <span className="text-red-400 font-display text-sm uppercase tracking-wider font-black">⚠ Get it wrong — </span>
+          <span className="text-red-300 text-base">{slide.consequence}</span>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function ScenarioSlide({ slide }) {
   const [revealed, setRevealed] = useState(false)
   return (
@@ -572,6 +624,9 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           </div>
         </div>
       )
+
+    case 'flipcards':
+      return <FlipCardsSlide slide={slide} />
 
     case 'scenario':
       return <ScenarioSlide slide={slide} />

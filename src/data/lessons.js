@@ -237,13 +237,57 @@ export const lessons = [
         duration: '5 mins',
       },
       {
+        type: 'flipcards',
+        heading: 'Common Mistakes — Getting the Key Type Wrong',
+        instruction: 'What questions should we be asking to identify the right key type? Suggest one — trainer will flip the card.',
+        cards: [
+          { hint: 'Start method', answer: 'How do you start the car — turn a key or push a button?' },
+          { hint: 'Blade or fob', answer: 'Is there a physical blade, or is it just a fob?' },
+          { hint: 'Flip blade', answer: 'Does the blade fold out of the fob, or is it fixed?' },
+          { hint: 'Buttons', answer: 'How many buttons does the key have?' },
+        ],
+        consequence: 'Get this wrong and the engineer turns up with the wrong parts — wasted visit, unhappy customer.',
+      },
+      {
+        type: 'big-question',
+        question: 'Common Mistake — Does the client have any working keys?',
+      },
+      {
         type: 'keypoints',
-        heading: 'Common Mistakes',
+        heading: 'Spare Key or No Spare?',
         points: [
-          'Assuming "lost keys" always means All Keys Lost — always ask about spares first',
-          'Forgetting to mention key deletion when keys are stolen',
-          'Calling it a "remote" when it\'s a smart key — customers notice',
-          'Not asking what year / make / model — price and feasibility depend on it',
+          'Always ask: "Do you have any other key that starts the car?"',
+          'No working key = All Keys Lost — different skillset, different price, harder job',
+          'If we quote for a spare and it turns out they have no working key, we may have to re-attend or fail the job',
+          'Failing a job means a refund and a wasted engineer visit — always confirm upfront',
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'Common Mistake — Confirming the vehicle?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Confirm Make, Model & Year',
+        points: [
+          'Always read the reg back and confirm the make and model out loud',
+          'Customers mishear, misread, or sometimes give the wrong reg entirely',
+          'Wrong vehicle info = engineer arrives with wrong key blank or can\'t do the job',
+          'Ask: "Just to confirm — is that a [make] [model], roughly what year?"',
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'Common Mistake — Do we have the right location?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Confirm the Full Address',
+        points: [
+          'Always confirm the full postcode — not just the town',
+          'Postcodes can easily be misheard: PE1 and BE1, NG2 and MG2, LS1 and ES1',
+          'A wrong postcode could send the engineer miles in the wrong direction',
+          'Repeat it back: "So that\'s [full postcode] — can you confirm that for me?"',
         ],
       },
     ],

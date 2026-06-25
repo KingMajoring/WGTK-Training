@@ -107,6 +107,7 @@ export const lessons = [
     xp: 80,
     icon: '👋',
     trainerNotes: [
+      'BEFORE YOU START — Offer tea/coffee, ask if travel was okay, make sure they\'re comfortable. Let them settle before jumping in.',
       'Keep the energy warm and relaxed — this sets the tone for everything that follows.',
       'Don\'t rush. If they\'re still chatting or settling in, let it happen. Tense people don\'t learn.',
       'TWO TRUTHS AND A LIE — Trainer goes first. Share: your name, your role, what you do day-to-day, how long you\'ve been at WGTK, and one surprising fact about yourself. This breaks the awkwardness instantly.',
@@ -121,15 +122,6 @@ export const lessons = [
       { label: 'Week 2 focus', value: 'Supported live calls' },
     ],
     content: [
-      {
-        type: 'keypoints',
-        heading: 'Warm Welcome',
-        points: [
-          'Offer tea or coffee ☕',
-          'Ask if travel was okay',
-          'Make sure they\'re comfortable',
-        ],
-      },
       {
         type: 'activity',
         heading: 'Two Truths and a Lie',

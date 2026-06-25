@@ -243,16 +243,6 @@ export const lessons = [
         ],
       },
       {
-        type: 'keypoints',
-        heading: 'What the Customer Should Expect',
-        points: [
-          'After the call: confirmation of the booking and an ETA for the engineer',
-          'The engineer will arrive with the right parts for the job — based on what you told us',
-          'Most jobs are completed on-site in one visit — all keys lost can take longer on complex vehicles',
-          'Customer should have the vehicle accessible and be present — we may need ID or V5 on some jobs',
-        ],
-      },
-      {
         type: 'intro',
         text: 'Every key we supply comes with a 12-month guarantee — on parts and workmanship. Just like going to the dealer.',
       },
@@ -265,70 +255,6 @@ export const lessons = [
           'Use this when customers push back on price — the dealer offers the same guarantee for more money',
           'It\'s a confidence builder: we stand behind every job we do',
         ],
-      },
-      {
-        type: 'break',
-        heading: 'Short Break',
-        duration: '5 mins',
-      },
-      {
-        type: 'flipcards',
-        heading: 'Common Mistakes — Getting the Key Type Wrong',
-        instruction: 'What questions should we be asking to identify the right key type? Suggest one — trainer will flip the card.',
-        cards: [
-          { hint: 'Start method', answer: 'How do you start the car — turn a key or push a button?' },
-          { hint: 'Blade or fob', answer: 'Is there a physical blade, or is it just a fob?' },
-          { hint: 'Flip blade', answer: 'Does the blade fold out of the fob, or is it fixed?' },
-          { hint: 'Buttons', answer: 'How many buttons does the key have?' },
-        ],
-        consequence: 'Get this wrong and the engineer turns up with the wrong parts — wasted visit, unhappy customer.',
-      },
-      {
-        type: 'big-question',
-        question: 'Common Mistake — Does the client have any working keys?',
-      },
-      {
-        type: 'keypoints',
-        heading: 'Spare Key or No Spare?',
-        points: [
-          'Always ask: "Do you have any other key that starts the car?"',
-          'No working key = All Keys Lost — different skillset, different price, harder job',
-          'If we quote for a spare and it turns out they have no working key, we may have to re-attend or fail the job',
-          'Failing a job means a refund and a wasted engineer visit — always confirm upfront',
-        ],
-      },
-      {
-        type: 'big-question',
-        question: 'Common Mistake — Confirming the vehicle?',
-      },
-      {
-        type: 'keypoints',
-        heading: 'Confirm Make, Model & Year',
-        points: [
-          'Always read the reg back and confirm the make and model out loud',
-          'Customers mishear, misread, or sometimes give the wrong reg entirely',
-          'Wrong vehicle info = engineer arrives with wrong key blank or can\'t do the job',
-          'Ask: "Just to confirm — is that a [make] [model], roughly what year?"',
-        ],
-      },
-      {
-        type: 'big-question',
-        question: 'Common Mistake — Do we have the right location?',
-      },
-      {
-        type: 'keypoints',
-        heading: 'Confirm the Full Address',
-        points: [
-          'Always confirm the full postcode — not just the town',
-          'Postcodes can easily be misheard: BR1 and PR1, DE1 and PE1, FY1 and SY1',
-          'A wrong postcode could send the engineer miles in the wrong direction',
-          'Repeat it back: "So that\'s [full postcode] — can you confirm that for me?"',
-          'Use the phonetic alphabet to spell it back if there\'s any doubt',
-        ],
-      },
-      {
-        type: 'phonetic',
-        heading: 'The Phonetic Alphabet',
       },
     ],
     quiz: [
@@ -351,6 +277,89 @@ export const lessons = [
   },
   {
     id: 4,
+    title: 'Gathering the Right Info',
+    subtitle: 'Ask the right questions, every time',
+    category: 'Sales Skills',
+    duration: '30 min',
+    xp: 90,
+    icon: '🎯',
+    trainerNotes: [
+      'This lesson directly follows Products & Services — trainees now understand what we offer, now they learn how to get the info right.',
+      'Flipcards: let them suggest questions before revealing. Make it competitive.',
+      'Walk through each common mistake slowly — ask them why each one matters before moving on.',
+      'Phonetic alphabet: get them to practise spelling back a postcode using it before moving on.',
+    ],
+    cheatSheet: [
+      { label: 'Key Type', value: 'How they start the car, blade or fob, flip or fixed, buttons' },
+      { label: 'Spare Key', value: 'Any working key that starts the car?' },
+      { label: 'Vehicle', value: 'Confirm make, model and year — not just the reg' },
+      { label: 'Location', value: 'Full postcode — spell back using phonetic alphabet' },
+    ],
+    content: [
+      {
+        type: 'flipcards',
+        heading: 'Getting the Key Type Right',
+        instruction: 'What questions should we be asking to identify the right key type? Suggest one — trainer will flip the card.',
+        cards: [
+          { hint: 'Start method', answer: 'How do you start the car — turn a key or push a button?' },
+          { hint: 'Blade or fob', answer: 'Is there a physical blade, or is it just a fob?' },
+          { hint: 'Flip blade', answer: 'Does the blade fold out of the fob, or is it fixed?' },
+          { hint: 'Buttons', answer: 'How many buttons does the key have?' },
+        ],
+        consequence: 'Get this wrong and the engineer turns up with the wrong parts — wasted visit, unhappy customer.',
+      },
+      {
+        type: 'big-question',
+        question: 'Does the client have any working keys?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Spare Key or No Spare?',
+        points: [
+          'Always ask: "Do you have any other key that starts the car?"',
+          'No working key = All Keys Lost — different skillset, different price, harder job',
+          'If we quote for a spare and it turns out they have no working key, we may have to re-attend or fail the job',
+          'Failing a job means a refund and a wasted engineer visit — always confirm upfront',
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'Have we confirmed the vehicle correctly?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Confirm Make, Model & Year',
+        points: [
+          'Always read the reg back and confirm the make and model out loud',
+          'Customers mishear, misread, or sometimes give the wrong reg entirely',
+          'Wrong vehicle info = engineer arrives with wrong key blank or can\'t do the job',
+          'Ask: "Just to confirm — is that a [make] [model], roughly what year?"',
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'Do we have the right location?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Confirm the Full Address',
+        points: [
+          'Always confirm the full postcode — not just the town',
+          'Postcodes can easily be misheard: BR1 and PR1, DE1 and PE1, FY1 and SY1',
+          'A wrong postcode could send the engineer miles in the wrong direction',
+          'Repeat it back: "So that\'s [full postcode] — can you confirm that for me?"',
+          'Use the phonetic alphabet to spell it back if there\'s any doubt',
+        ],
+      },
+      {
+        type: 'phonetic',
+        heading: 'The Phonetic Alphabet',
+      },
+    ],
+    quiz: [],
+  },
+  {
+    id: 5,
     title: 'What Customers Say',
     subtitle: 'Matching what they say to what they need',
     category: 'Product Knowledge',

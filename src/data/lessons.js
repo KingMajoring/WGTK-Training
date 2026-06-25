@@ -143,6 +143,7 @@ export const lessons = [
     icon: '🔧',
     trainerNotes: [
       'Have physical key samples ready before this session — blade keys, transponder keys, remotes, flip keys, and smart/proximity keys.',
+      'WARM-UP: Use whiteboard for both opening questions. Encourage trainees to make notes. Let them talk freely — don\'t correct yet, just capture.',
       'Start with the warm-up discussion — let them talk first, then correct and frame it.',
       'When you get to key types, pass the samples around. Let them handle them.',
       'The "Customer Says" table is a great exercise — ask them to guess what the customer actually means before revealing it.',
@@ -159,9 +160,12 @@ export const lessons = [
     ],
     content: [
       {
-        type: 'activity',
-        heading: 'What do we actually sell?',
-        instruction: 'Before we dive in — what do you think a customer is getting when they call us? What are we actually providing?',
+        type: 'big-question',
+        question: 'Why do you think a customer might call us?',
+      },
+      {
+        type: 'big-question',
+        question: 'What might the customer be feeling?',
       },
       {
         type: 'services',

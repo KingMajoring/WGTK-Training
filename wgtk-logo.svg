@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" fill="none">
+  <!-- WE'VE GOT line -->
+  <text x="10" y="90" font-family="'Barlow Condensed', Impact, sans-serif" font-weight="900" font-size="88" fill="white" letter-spacing="-2">WE'VE G</text>
+
+  <!-- Orange circle (the O in GOT) -->
+  <circle cx="368" cy="54" r="40" fill="#F15A22"/>
+  <!-- Key fob icon inside circle -->
+  <g transform="translate(368,54)">
+    <!-- Key fob body (rounded rect) -->
+    <rect x="-13" y="-18" width="26" height="30" rx="5" fill="white"/>
+    <!-- Key blade -->
+    <rect x="-3" y="12" width="6" height="14" rx="1" fill="white"/>
+    <!-- Key teeth -->
+    <rect x="3" y="16" width="5" height="4" rx="1" fill="#F15A22"/>
+    <rect x="3" y="22" width="5" height="4" rx="1" fill="#F15A22"/>
+    <!-- Button on fob -->
+    <rect x="-7" y="-10" width="14" height="8" rx="2" fill="#F15A22"/>
+    <rect x="-4" y="-6" width="4" height="4" rx="1" fill="white"/>
+    <rect x="2" y="-6" width="4" height="4" rx="1" fill="white"/>
+  </g>
+  <text x="412" y="90" font-family="'Barlow Condensed', Impact, sans-serif" font-weight="900" font-size="88" fill="white" letter-spacing="-2">T</text>
+
+  <!-- THE KEY line -->
+  <text x="10" y="170" font-family="'Barlow Condensed', Impact, sans-serif" font-weight="900" font-size="88" fill="white" letter-spacing="-2">THE </text>
+  <text x="196" y="170" font-family="'Barlow Condensed', Impact, sans-serif" font-weight="900" font-size="88" fill="#F15A22" letter-spacing="-2">KEY</text>
+
+  <!-- Dividing line -->
+  <line x1="10" y1="182" x2="510" y2="182" stroke="#555" stroke-width="2"/>
+
+  <!-- AUTO LOCKSMITHS -->
+  <text x="10" y="214" font-family="'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="36" fill="#F15A22" letter-spacing="4">AUTO LOCKSMITHS</text>
+</svg>

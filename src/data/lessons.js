@@ -111,7 +111,7 @@ export const lessons = [
       'Keep the energy warm and relaxed — this sets the tone for everything that follows.',
       'Don\'t rush. If they\'re still chatting or settling in, let it happen. Tense people don\'t learn.',
       'TWO TRUTHS AND A LIE — Trainer goes first. Share: your name, your role, what you do day-to-day, how long you\'ve been at WGTK, and one surprising fact about yourself. This breaks the awkwardness instantly.',
-      'When they share their goal, write it down visibly. It tells them you\'re listening and you\'ll hold them to it.',
+      'BIG QUESTION SLIDE — Write their answers down visibly as they speak. It tells them you\'re listening and you\'ll hold them to it.',
     ],
     cheatSheet: [
       { label: 'Format', value: 'Informal, interactive, conversation-based' },

@@ -515,12 +515,9 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
       return (
         <div className="max-w-4xl w-full mx-auto slide-up text-center">
           <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">Discussion</div>
-          <p className="font-display text-5xl md:text-6xl font-black uppercase text-white leading-tight mb-10">
+          <p className="font-display text-5xl md:text-6xl font-black uppercase text-white leading-tight">
             {slide.question}
           </p>
-          {slide.note && (
-            <div className="text-brand font-display text-sm uppercase tracking-widest">⚡ {slide.note}</div>
-          )}
         </div>
       )
 

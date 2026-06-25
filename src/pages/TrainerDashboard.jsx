@@ -26,9 +26,17 @@ export default function TrainerDashboard() {
         <button onClick={() => navigate('/')} className="hover:opacity-70 transition-opacity">
           <WGTKLogo size="lg" />
         </button>
-        <div className="text-right">
-          <div className="text-brand font-display text-xs tracking-widest uppercase mb-1">Trainer Mode</div>
-          <div className="text-gray-500 text-sm">Select a lesson to present</div>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => navigate('/docs')}
+            className="font-display text-sm uppercase tracking-wider px-4 py-2 rounded-xl border border-surface-5 text-gray-400 hover:border-brand hover:text-white transition-all"
+          >
+            📄 Resources
+          </button>
+          <div className="text-right">
+            <div className="text-brand font-display text-xs tracking-widest uppercase mb-1">Trainer Mode</div>
+            <div className="text-gray-500 text-sm">Select a lesson to present</div>
+          </div>
         </div>
       </div>
 

@@ -5,6 +5,8 @@ import TrainerDashboard from './pages/TrainerDashboard'
 import TrainerLesson from './pages/TrainerLesson'
 import TraineeDashboard from './pages/TraineeDashboard'
 import TraineeLesson from './pages/TraineeLesson'
+import Docs from './pages/Docs'
+import CallObservationSheet from './pages/CallObservationSheet'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="/trainer/lesson/:id" element={<TrainerLesson />} />
         <Route path="/trainee" element={<TraineeDashboard />} />
         <Route path="/trainee/lesson/:id" element={<TraineeLesson />} />
+        <Route path="/docs" element={<Docs />} />
+        <Route path="/docs/call-observation" element={<CallObservationSheet />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>

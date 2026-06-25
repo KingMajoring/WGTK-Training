@@ -197,15 +197,39 @@ export const lessons = [
         ],
       },
       {
-        type: 'table',
-        heading: 'What the Customer Says vs What They Mean',
-        rows: [
-          { says: '"I\'ve lost my keys"', means: 'Could be all keys lost, or just one — always ask if they have a spare', ask: '"Do you have any other keys for the vehicle?"' },
-          { says: '"Can you cut me a key?"', means: 'They want a spare — but check what they currently have', ask: '"How many keys do you currently have for the car?"' },
-          { says: '"My key\'s not working"', means: 'Could be battery, could be damaged transponder, could be deprogrammed', ask: '"Does the key turn in the lock? Does the car recognise it at all?"' },
-          { says: '"The key\'s snapped in the door"', means: 'Broken key extraction + possibly a new key too', ask: '"Is any part of the key still in the lock? Can you still get into the car?"' },
-          { says: '"Someone\'s nicked my keys"', means: 'Security risk — they likely need key deletion + new key', ask: '"Is the car at risk? Do you want us to wipe the old key from the system?"' },
-        ],
+        type: 'scenario',
+        quote: '"I\'ve lost my keys — I can\'t find them anywhere."',
+        answer: 'All Keys Lost — ask if they have a spare first. If yes, Spare Key instead.',
+      },
+      {
+        type: 'scenario',
+        quote: '"Can you cut me a key? I just want a copy."',
+        answer: 'Spare Key — confirm they have a working key to copy from.',
+      },
+      {
+        type: 'scenario',
+        quote: '"My key\'s not working — the car won\'t recognise it."',
+        answer: 'Could be a dead remote battery, a damaged transponder, or a deprogrammed key. Ask: does it turn in the lock at all?',
+      },
+      {
+        type: 'scenario',
+        quote: '"Someone\'s stolen my bag — my car keys were in it."',
+        answer: 'Key Deletion (urgent — wipe the stolen key) + All Keys Lost for a new key. Security is the priority.',
+      },
+      {
+        type: 'scenario',
+        quote: '"I\'ve locked my keys in the car."',
+        answer: 'Gain Access — we open the vehicle damage-free. Ask where the car is and whether it\'s a keyless/push-start car.',
+      },
+      {
+        type: 'scenario',
+        quote: '"My key snapped off in the door."',
+        answer: 'Broken Key Extraction — we remove the fragment. Then likely a new key cut and coded too.',
+      },
+      {
+        type: 'scenario',
+        quote: '"The car just won\'t start — the key goes in but nothing happens."',
+        answer: 'Could be ignition barrel failure or steering lock fault (common on VAG group). Ask: does the steering feel locked? Any warning lights?',
       },
       {
         type: 'break',

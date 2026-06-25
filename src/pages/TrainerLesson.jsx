@@ -49,6 +49,9 @@ function buildSlides(lesson) {
     if (block.type === 'table') {
       slides.push({ type: 'table', heading: block.heading, rows: block.rows })
     }
+    if (block.type === 'scenario') {
+      slides.push({ type: 'scenario', quote: block.quote, answer: block.answer })
+    }
     if (block.type === 'break') {
       slides.push({ type: 'break', heading: block.heading, duration: block.duration })
     }
@@ -321,6 +324,31 @@ function QuizSlide({ slide }) {
   )
 }
 
+function ScenarioSlide({ slide }) {
+  const [revealed, setRevealed] = useState(false)
+  return (
+    <div className="max-w-4xl w-full mx-auto slide-up text-center" onClick={e => e.stopPropagation()}>
+      <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">What do they need?</div>
+      <p className="font-display text-4xl md:text-5xl font-black text-white leading-tight mb-12">
+        {slide.quote}
+      </p>
+      {!revealed ? (
+        <button
+          onClick={() => setRevealed(true)}
+          className="font-display text-xl font-black uppercase tracking-wider px-10 py-4 rounded-2xl bg-surface-3 border border-surface-5 text-brand hover:border-brand transition-all"
+        >
+          Reveal Answer →
+        </button>
+      ) : (
+        <div className="bg-surface-3 border border-brand/40 rounded-2xl px-8 py-6 slide-up text-left">
+          <div className="text-brand font-display text-xs uppercase tracking-widest mb-2">Service Needed</div>
+          <p className="text-white text-2xl font-display font-bold leading-snug">{slide.answer}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function StatsSlide({ slide }) {
   const [active, setActive] = useState(null)
   return (
@@ -543,6 +571,9 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           </div>
         </div>
       )
+
+    case 'scenario':
+      return <ScenarioSlide slide={slide} />
 
     case 'table': {
       const visibleRows = slide.rows.slice(0, subStep + 1)

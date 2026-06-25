@@ -49,7 +49,9 @@ function buildSlides(lesson) {
   })
 
   // Cheat sheet slide
-  slides.push({ type: 'cheatsheet', items: lesson.cheatSheet })
+  if (lesson.cheatSheet && lesson.cheatSheet.length > 0) {
+    slides.push({ type: 'cheatsheet', items: lesson.cheatSheet })
+  }
 
   // Quiz slides (for class discussion)
   lesson.quiz.forEach((q, i) => {

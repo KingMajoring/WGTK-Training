@@ -145,6 +145,7 @@ export const lessons = [
       'Have physical key samples ready before this session — blade keys, transponder keys, remotes, flip keys, and smart/proximity keys.',
       'WARM-UP: Use whiteboard for both opening questions. Encourage trainees to make notes. Let them talk freely — don\'t correct yet, just capture.',
       'Start with the warm-up discussion — let them talk first, then correct and frame it.',
+      'GAIN ACCESS DEMO: Show the tools — long rod, airbag/wedge, picks. Demonstrate on a vehicle or door if available. Key points: no damage to bodywork or locks, faster than a dealer, fully insured.',
       'When you get to key types, pass the samples around. Let them handle them.',
       'The "Customer Says" table is a great exercise — ask them to guess what the customer actually means before revealing it.',
       'For scenarios, read them out slowly. Give trainees time to think before they answer.',
@@ -168,12 +169,9 @@ export const lessons = [
         question: 'What might the customer be feeling?',
       },
       {
-        type: 'services',
+        type: 'activity',
         heading: 'Gain Access',
-        services: [
-          { name: 'Keys locked inside', desc: 'We open the vehicle damage-free when keys are locked inside — in minutes, no damage to locks or bodywork.' },
-          { name: 'Keys broken in lock', desc: 'We extract broken key fragments from ignitions or door barrels without destroying the lock.' },
-        ],
+        instruction: 'How do you think we open a car when the keys are locked inside?',
       },
       {
         type: 'services',

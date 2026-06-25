@@ -248,6 +248,63 @@ export default function TrainerLesson() {
   )
 }
 
+function QuizSlide({ slide }) {
+  const [selected, setSelected] = useState(null)
+
+  const correct = selected === slide.q.answer
+  const wrong = selected !== null && !correct
+
+  return (
+    <div className="max-w-4xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+      <div className="text-brand font-display text-lg tracking-widest uppercase mb-4">
+        Class Question {slide.index + 1} of {slide.total}
+      </div>
+      <h2 className="text-white font-display text-4xl md:text-5xl font-black uppercase leading-tight mb-10">
+        {slide.q.question}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        {slide.q.options.map((opt, j) => {
+          const isCorrect = selected !== null && j === slide.q.answer
+          const isWrong = selected === j && !correct
+          return (
+            <button
+              key={j}
+              onClick={() => { if (selected === null || wrong) setSelected(j) }}
+              className={`px-6 py-5 rounded-xl border text-xl font-display font-bold text-left transition-all duration-200 ${
+                isCorrect
+                  ? 'border-green-500 bg-green-500/15 text-green-400'
+                  : isWrong
+                  ? 'border-red-500 bg-red-500/15 text-red-400'
+                  : selected !== null
+                  ? 'border-surface-5 text-gray-600 cursor-default'
+                  : 'border-surface-5 text-white bg-surface-3 hover:border-brand/50 cursor-pointer'
+              }`}
+            >
+              <span className="mr-3 opacity-60">{String.fromCharCode(65 + j)}.</span>
+              {opt}
+              {isCorrect && <span className="ml-2">✓</span>}
+              {isWrong && <span className="ml-2">✗</span>}
+            </button>
+          )
+        })}
+      </div>
+      {wrong && (
+        <button
+          onClick={() => setSelected(null)}
+          className="font-display text-xl font-black uppercase tracking-wider px-8 py-4 rounded-xl bg-surface-3 border border-surface-5 text-white hover:border-brand transition-all"
+        >
+          Try Again →
+        </button>
+      )}
+      {correct && (
+        <div className="font-display text-xl font-black uppercase tracking-wider text-green-400">
+          ✓ Correct!
+        </div>
+      )}
+    </div>
+  )
+}
+
 function StatsSlide({ slide }) {
   const [active, setActive] = useState(null)
   return (
@@ -431,47 +488,8 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
         </div>
       )
 
-    case 'quiz': {
-      const isRevealed = revealed[slide.index]
-      return (
-        <div className="max-w-4xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
-          <div className="text-brand font-display text-lg tracking-widest uppercase mb-4">
-            Class Question {slide.index + 1} of {slide.total}
-          </div>
-          <h2 className="text-white font-display text-4xl md:text-5xl font-black uppercase leading-tight mb-10">
-            {slide.q.question}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {slide.q.options.map((opt, j) => (
-              <div
-                key={j}
-                className={`px-6 py-5 rounded-xl border text-xl font-display font-bold transition-all ${
-                  isRevealed && j === slide.q.answer
-                    ? 'border-green-500 bg-green-500/15 text-green-400'
-                    : isRevealed && j !== slide.q.answer
-                    ? 'border-surface-5 text-gray-600'
-                    : 'border-surface-5 text-white bg-surface-3'
-                }`}
-              >
-                <span className="text-brand mr-3">{String.fromCharCode(65 + j)}.</span>
-                {opt}
-                {isRevealed && j === slide.q.answer && <span className="ml-2">✓</span>}
-              </div>
-            ))}
-          </div>
-          <button
-            onClick={() => toggleReveal(slide.index)}
-            className={`font-display text-xl font-black uppercase tracking-wider px-8 py-4 rounded-xl transition-all ${
-              isRevealed
-                ? 'bg-surface-3 border border-surface-5 text-gray-400'
-                : 'bg-brand hover:bg-brand-dark text-white'
-            }`}
-          >
-            {isRevealed ? 'Hide Answer' : 'Reveal Answer'}
-          </button>
-        </div>
-      )
-    }
+    case 'quiz':
+      return <QuizSlide slide={slide} />
 
     case 'end':
       return (

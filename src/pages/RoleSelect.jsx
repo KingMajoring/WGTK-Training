@@ -9,7 +9,7 @@ export default function RoleSelect() {
   const [name, setName] = useState('')
 
   function goTrainer() {
-    navigate('/trainer')
+    navigate('/trainer/briefing')
   }
 
   function goTrainee() {

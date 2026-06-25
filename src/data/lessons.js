@@ -147,6 +147,10 @@ export const lessons = [
       'WARM-UP: Use whiteboard for both opening questions. Encourage trainees to make notes. Let them talk freely — don\'t correct yet, just capture.',
       'Start with the warm-up discussion — let them talk first, then correct and frame it.',
       'GAIN ACCESS DEMO: Show the tools — long rod, airbag/wedge, picks. Demonstrate on a vehicle or door if available. Key points: no damage to bodywork or locks, faster than a dealer, fully insured.',
+      'WHAT WE CAN\'T DO: Emphasise this clearly — new BMW and Merc All Keys Lost are not feasible currently. Better to flag early than fail on site.',
+      'US VS DEALER: This is a key selling point. Engineers are mobile, same day, cheaper. Customers often go to the dealer first out of habit — we need trainees to confidently explain why WGTK is the better call.',
+      'PRICING: Walk through Orbit briefly. Show them where pricing comes from. Reinforce: never quote without all the info — Orbit needs location, make, model, year, and service to generate an accurate price.',
+      'GUARANTEE: The 12-month guarantee is a confidence tool — use it when customers hesitate on price.',
       'KEY TYPES DEMO: Pass samples around. Fixed blade — traditional cut key, older vehicles. Transponder — blade with chip inside, must be coded to the immobiliser. Remote types: Flip key (blade folds into remote fob), Fixed remote (one piece, blade + buttons), Dash insert (remote slides into a slot on the dash), Proximity/Smart key (no blade, push-button start, just needs to be near the car).',
       'STEERING LOCKS DEMO: Show the steering lock / ignition barrel housing. VAG group vehicles (VW, Audi, Seat, Skoda) are notorious for this — the electronic steering lock fails and the car won\'t start. We replace the whole barrel housing unit. Show the part and walk through what a failed one looks like vs a new one.',
       'When you get to key types, pass the samples around. Let them handle them.',
@@ -195,6 +199,71 @@ export const lessons = [
           { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged or all keys are lost and a replacement is needed.' },
           { name: 'Door Barrel Replacement', desc: 'We replace door lock cylinders — often needed when a key breaks inside or the barrel is worn.' },
           { name: 'Steering Lock', desc: 'Very common on VAG group vehicles (VW, Audi, Seat, Skoda) — the electronic steering lock inside the barrel housing fails and the car won\'t start. We replace the whole unit.' },
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'What We Can\'t Do',
+        points: [
+          'All Keys Lost on new BMW and Mercedes — these require dealer involvement due to security restrictions',
+          'If a job isn\'t feasible, say so early — never promise something and let the engineer find out on arrival',
+          'When in doubt, check before confirming — it\'s better to call back than to fail on site',
+        ],
+      },
+      {
+        type: 'two-col',
+        heading: 'Us vs the Dealer',
+        left: {
+          label: 'The Dealer',
+          points: [
+            'You take the car to them',
+            'Wait days — sometimes weeks',
+            'Often the most expensive option',
+            'Fixed location — you need recovery first',
+          ],
+        },
+        right: {
+          label: 'WGTK',
+          points: [
+            'We come to you — wherever you are',
+            'Same day, often within hours',
+            'Usually significantly cheaper',
+            'No recovery needed — we work on-site',
+          ],
+        },
+      },
+      {
+        type: 'keypoints',
+        heading: 'How Pricing Works',
+        points: [
+          'Prices are generated through Orbit — our own purpose-built CRM system',
+          'Orbit takes the location, make, model, year, and service — and produces the price',
+          'You can\'t quote without that information — never guess or give a rough figure',
+          'Price can vary by area, vehicle complexity, and service type — Orbit accounts for all of this',
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'What the Customer Should Expect',
+        points: [
+          'After the call: confirmation of the booking and an ETA for the engineer',
+          'The engineer will arrive with the right parts for the job — based on what you told us',
+          'Most jobs are completed on-site in one visit — all keys lost can take longer on complex vehicles',
+          'Customer should have the vehicle accessible and be present — we may need ID or V5 on some jobs',
+        ],
+      },
+      {
+        type: 'intro',
+        text: 'Every key we supply comes with a 12-month guarantee — on parts and workmanship. Just like going to the dealer.',
+      },
+      {
+        type: 'keypoints',
+        heading: 'The 12-Month Guarantee',
+        points: [
+          'Covers all keys supplied and all work carried out by WGTK and our panel engineers',
+          'If anything goes wrong with the key or the programming within 12 months, we fix it',
+          'Use this when customers push back on price — the dealer offers the same guarantee for more money',
+          'It\'s a confidence builder: we stand behind every job we do',
         ],
       },
       {

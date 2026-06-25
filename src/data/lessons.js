@@ -237,31 +237,6 @@ export const lessons = [
         duration: '5 mins',
       },
       {
-        type: 'activity',
-        heading: 'Scenario: What would you do?',
-        instruction: 'A customer calls. They say: "I can\'t find my car keys anywhere — I\'ve looked everywhere. I don\'t have a spare." What service do they need, and what questions do you ask first?',
-      },
-      {
-        type: 'activity',
-        heading: 'Scenario: Stolen Key',
-        instruction: 'A customer calls — their bag was stolen with their car keys inside. The car is parked on the street. What do they need, and in what order?',
-      },
-      {
-        type: 'activity',
-        heading: 'Scenario: Broken Key',
-        instruction: 'A customer calls — they broke their key in the driver\'s door lock. The other half is still in the lock. What services might they need from us?',
-      },
-      {
-        type: 'activity',
-        heading: 'Scenario: Fleet Manager',
-        instruction: 'A fleet manager calls. They have a company van — driver left the job last week and kept the key. The van still runs on the old key. What do they need?',
-      },
-      {
-        type: 'activity',
-        heading: 'Scenario: Locked Out',
-        instruction: 'A customer calls — keys on the seat, car locked, running. What\'s the service? What do you need from them to book it in?',
-      },
-      {
         type: 'keypoints',
         heading: 'Common Mistakes',
         points: [

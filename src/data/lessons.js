@@ -191,8 +191,9 @@ export const lessons = [
         type: 'services',
         heading: 'Security & Lockset',
         services: [
-          { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged, all keys are lost, or — especially on VAG group vehicles — the electronic steering lock built into the barrel housing fails and the car won\'t start.' },
+          { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged or all keys are lost and a replacement is needed.' },
           { name: 'Door Barrel Replacement', desc: 'We replace door lock cylinders — often needed when a key breaks inside or the barrel is worn.' },
+          { name: 'Steering Lock', desc: 'Very common on VAG group vehicles (VW, Audi, Seat, Skoda) — the electronic steering lock inside the barrel housing fails and the car won\'t start. We replace the whole unit.' },
         ],
       },
       {

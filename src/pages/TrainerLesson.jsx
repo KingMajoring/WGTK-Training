@@ -193,6 +193,7 @@ export default function TrainerLesson() {
           <WGTKLogo size="sm" />
         </div>
         <SlideContent
+          key={current}
           slide={slide}
           subStep={subStep}
           revealed={revealed}

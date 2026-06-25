@@ -285,7 +285,7 @@ export const lessons = [
         heading: 'Confirm the Full Address',
         points: [
           'Always confirm the full postcode — not just the town',
-          'Postcodes can easily be misheard: PE1 and BE1, NG2 and MG2, LS1 and ES1',
+          'Postcodes can easily be misheard: BR1 and PR1, DE1 and PE1, FY1 and SY1',
           'A wrong postcode could send the engineer miles in the wrong direction',
           'Repeat it back: "So that\'s [full postcode] — can you confirm that for me?"',
         ],

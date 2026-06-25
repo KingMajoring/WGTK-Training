@@ -14,6 +14,7 @@ export const lessons = [
       'TWO TRUTHS AND A LIE — Trainer goes first. Share: your name, your role, what you do day-to-day, how long you\'ve been at WGTK, and one surprising fact about yourself.',
       'FIRST JOB — Share your own first job story too. The funnier or more embarrassing the better — it gets people talking.',
       'BIG QUESTION SLIDE — Write their answers down visibly as they speak. It tells them you\'re listening.',
+      'MEET THE TEAM — Print one question sheet per trainee before the session. They must introduce themselves before anyone will answer. Give them 10–15 mins to move around the office.',
     ],
     cheatSheet: [],
     content: [
@@ -30,6 +31,11 @@ export const lessons = [
       {
         type: 'big-question',
         question: 'What\'s one thing you\'re hoping to get good at in this job?',
+      },
+      {
+        type: 'activity',
+        heading: 'Meet the Team',
+        instruction: 'You\'ll get a sheet with questions about your new colleagues. Go and find the answers — but you must introduce yourself before anyone answers anything.',
       },
     ],
     quiz: [],

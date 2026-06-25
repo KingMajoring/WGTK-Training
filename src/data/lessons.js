@@ -136,6 +136,113 @@ export const lessons = [
   },
   {
     id: 3,
+    title: 'Who Are Our Clients?',
+    subtitle: 'Retail, Trade, Insurance & Referral',
+    category: 'Foundation',
+    duration: '30 min',
+    xp: 100,
+    icon: '🤝',
+    trainerNotes: [
+      'This lesson sets the context for everything — who is actually calling us and why it matters.',
+      'RETAIL: Make the point about Google Ads spend clearly — every enquiry costs us money to generate. Wasted enquiries are wasted budget.',
+      'TRADE: Drop the company names — Manheim, BCA, Fix Auto, Steer, Northgate, Enterprise. These will mean something to some trainees.',
+      'TRADE FLEET: The speed point is critical — if the vehicle is off the road, the client isn\'t earning. We are often time-critical for these clients.',
+      'INSURANCE: Emphasise the MI reporting angle — local locksmiths can\'t provide this. That\'s part of why they use us.',
+      'REFERRAL: Use the RAC example. Some referrals are fully funded, some the client pays — it varies per partnership.',
+      'QUIZ: Read out each client example and let the group discuss before revealing the answer.',
+    ],
+    cheatSheet: [
+      { label: 'Retail', value: 'wevegotthekey.co.uk / mycarkeyhero.co.uk — Google Ads driven' },
+      { label: 'Trade — Auction', value: 'Manheim, BCA — vehicles in with no keys' },
+      { label: 'Trade — Bodyshop', value: 'Fix Auto, Steer — insurance technical work' },
+      { label: 'Trade — Fleet', value: 'Northgate, Enterprise — speed is everything' },
+      { label: 'Insurance', value: 'Major insurers — one-stop shop, MI reporting' },
+      { label: 'Referral', value: 'RAC etc — pass client to us, funded or client pays' },
+    ],
+    content: [
+      {
+        type: 'big-question',
+        question: 'Who do you think actually calls us — and why?',
+      },
+      {
+        type: 'services',
+        heading: 'Retail',
+        services: [
+          { name: 'wevegotthekey.co.uk', desc: 'Our main consumer website. Customers find us when they search Google — we invest heavily in ads to appear near the top of the results.' },
+          { name: 'mycarkeyhero.co.uk', desc: 'A second retail brand targeting the same audience. Two websites, double the chances of capturing the enquiry.' },
+          { name: 'Price & ETA Aware', desc: 'Retail customers have usually been shopping around. They want a price and they want to know how quickly we can get there.' },
+          { name: 'Often High Stress', desc: 'Many retail calls are roadside — all keys lost, stranded. They\'re not in a good place. How we handle them on the call matters.' },
+        ],
+      },
+      {
+        type: 'intro',
+        text: 'Every retail enquiry costs us money to generate. Google Ads are expensive. We cannot afford to waste a single call.',
+      },
+      {
+        type: 'services',
+        heading: 'Trade — Three Types',
+        services: [
+          { name: 'Car Auctions', desc: 'Companies like Manheim and BCA receive vehicles with no keys — often repossessed cars. They need keys cut and programmed before the vehicle can be sold.' },
+          { name: 'Bodyshops', desc: 'Fix Auto, Steer and others carry out work on behalf of insurers. They bring us in for the technical jobs — lock replacements, key programming — that they can\'t do themselves.' },
+          { name: 'Fleet Management', desc: 'Northgate, Enterprise and similar companies manage thousands of vehicles across the UK. Speed is critical — a vehicle off the road is a vehicle not earning. They rely on our nationwide coverage.' },
+        ],
+      },
+      {
+        type: 'services',
+        heading: 'Insurance',
+        services: [
+          { name: 'Major UK Insurers', desc: 'We work with some of the UK\'s biggest insurance companies. When their policyholder loses a key, they send the job to us instead of a dealer — we\'re faster and cheaper.' },
+          { name: 'One-Stop Shop', desc: 'Rather than managing dozens of local locksmiths across the UK, insurers use us as a single supplier. One relationship, national coverage.' },
+          { name: 'MI Reporting', desc: 'Insurers are data-heavy. They need detailed management information on every job — response times, completion rates, costs. We\'ve built our systems around this. A local locksmith can\'t provide it.' },
+        ],
+      },
+      {
+        type: 'services',
+        heading: 'Referral',
+        services: [
+          { name: 'Partner Companies', desc: 'Some organisations — like the RAC — know their limits. When a member loses their keys, the RAC can\'t help. But instead of turning them away, they pass the client to us.' },
+          { name: 'Funded or Client Pays', desc: 'Depending on the partnership, the referring company may fund all or part of the job. Other times the client pays in full. This varies — always check the job details.' },
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'Why does it matter which client type you\'re dealing with?',
+      },
+      {
+        type: 'scenario',
+        quote: 'A customer calls having found us online. They\'re on the hard shoulder of the M6 — all keys lost, baby in the car.',
+        answer: 'Retail — high stress, roadside. Speed and reassurance are everything. This is exactly the enquiry our Google Ads spend is generating.',
+      },
+      {
+        type: 'scenario',
+        quote: 'A call centre contacts us. A fleet van in Sheffield needs a spare key — driver has one key and the company wants a backup.',
+        answer: 'Trade — Fleet (e.g. Northgate, Enterprise). Speed matters — vehicle downtime costs them money. Treat it as urgent.',
+      },
+      {
+        type: 'scenario',
+        quote: 'A bodyshop in Bristol calls. They\'ve replaced a door lock on a Volkswagen and need the new barrel programmed to the existing key.',
+        answer: 'Trade — Bodyshop (e.g. Fix Auto, Steer). Technical job, insurance-related. They\'re not the end customer — handle professionally.',
+      },
+      {
+        type: 'scenario',
+        quote: 'A call is transferred to us from a breakdown company. Their member has locked their keys in the car — they can\'t help but don\'t want to leave them stranded.',
+        answer: 'Referral — e.g. RAC. Check whether the job is funded by the referrer or if the customer pays. Treat the customer as retail.',
+      },
+      {
+        type: 'scenario',
+        quote: 'A job comes through from an insurer. Their policyholder needs all keys replaced. They want a completion report and cost breakdown within 24 hours.',
+        answer: 'Insurance. One-stop shop job — MI reporting is required. They\'re not an ad-hoc customer, this is a managed account.',
+      },
+      {
+        type: 'scenario',
+        quote: 'An auction site calls. Six repossessed vehicles have arrived with no keys this week — can we book them all in?',
+        answer: 'Trade — Auction (e.g. Manheim, BCA). Batch work, not urgent in the same way as roadside. Co-ordinate efficiently.',
+      },
+    ],
+    quiz: [],
+  },
+  {
+    id: 4,
     title: 'Products & Services',
     subtitle: 'What we sell and how to talk about it',
     category: 'Product Knowledge',
@@ -276,7 +383,7 @@ export const lessons = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Gathering the Right Info',
     subtitle: 'Ask the right questions, every time',
     category: 'Sales Skills',
@@ -359,7 +466,7 @@ export const lessons = [
     quiz: [],
   },
   {
-    id: 5,
+    id: 6,
     title: 'What Customers Say',
     subtitle: 'Matching what they say to what they need',
     category: 'Product Knowledge',
@@ -421,7 +528,7 @@ export const lessons = [
     quiz: [],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Meet the Team',
     subtitle: 'Get to know the people around you',
     category: 'Foundation',
@@ -445,7 +552,7 @@ export const lessons = [
     quiz: [],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Call Shadowing',
     subtitle: 'What a real call actually sounds like',
     category: 'Foundation',

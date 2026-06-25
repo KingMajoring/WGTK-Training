@@ -147,6 +147,7 @@ export const lessons = [
       'Start with the warm-up discussion — let them talk first, then correct and frame it.',
       'GAIN ACCESS DEMO: Show the tools — long rod, airbag/wedge, picks. Demonstrate on a vehicle or door if available. Key points: no damage to bodywork or locks, faster than a dealer, fully insured.',
       'KEY TYPES DEMO: Pass samples around. Fixed blade — traditional cut key, older vehicles. Transponder — blade with chip inside, must be coded to the immobiliser. Remote types: Flip key (blade folds into remote fob), Fixed remote (one piece, blade + buttons), Dash insert (remote slides into a slot on the dash), Proximity/Smart key (no blade, push-button start, just needs to be near the car).',
+      'STEERING LOCKS DEMO: Show the steering lock / ignition barrel housing. VAG group vehicles (VW, Audi, Seat, Skoda) are notorious for this — the electronic steering lock fails and the car won\'t start. We replace the whole barrel housing unit. Show the part and walk through what a failed one looks like vs a new one.',
       'When you get to key types, pass the samples around. Let them handle them.',
       'The "Customer Says" table is a great exercise — ask them to guess what the customer actually means before revealing it.',
       'For scenarios, read them out slowly. Give trainees time to think before they answer.',
@@ -185,6 +186,11 @@ export const lessons = [
           { name: 'Dash Insert', desc: 'A slim key card or fob that slides into a slot in the dashboard. The car reads the fob and allows push-button start.' },
           { name: 'Proximity / Smart Key', desc: 'No blade at all. Just needs to be near the car — push-button start. Most modern vehicles. Also the most complex to programme.' },
         ],
+      },
+      {
+        type: 'activity',
+        heading: 'Steering Locks',
+        instruction: 'Some vehicles have a steering lock built into the ignition barrel housing — when it fails, the car won\'t start at all.',
       },
       {
         type: 'services',

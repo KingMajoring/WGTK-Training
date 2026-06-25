@@ -430,6 +430,8 @@ export const lessons = [
       },
     ],
   },
-]; = [...new Set(lessons.map(l => l.category))];
+];
+
+export const categories = [...new Set(lessons.map(l => l.category))];
 
 export const getLessonById = (id) => lessons.find(l => l.id === parseInt(id));

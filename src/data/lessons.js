@@ -220,8 +220,8 @@ export const lessons = [
       },
       {
         type: 'scenario',
-        quote: 'A bodyshop in Bristol calls. They\'ve replaced a door lock on a Volkswagen and need the new barrel programmed to the existing key.',
-        answer: 'Trade — Bodyshop (e.g. Fix Auto, Steer). Technical job, insurance-related. They\'re not the end customer — handle professionally.',
+        quote: 'A bodyshop in Bristol calls. A Volkswagen has come in with a damaged door lock — they need us to supply, fit, and program new locks to match the existing key.',
+        answer: 'Trade — Bodyshop (e.g. Fix Auto, Steer). We supply and fit the locks, then program the keys. Insurance-related job — they\'re not the end customer, handle professionally.',
       },
       {
         type: 'scenario',

@@ -71,8 +71,8 @@ export default function RoleSelect() {
 
             {/* Trainee Card */}
             <button
-              onClick={goTrainee}
-              className="group relative bg-surface-3 border border-surface-5 hover:border-brand rounded-2xl p-8 text-left transition-all duration-200 hover:bg-surface-4"
+              disabled
+              className="group relative bg-surface-3 border border-surface-5 rounded-2xl p-8 text-left opacity-40 cursor-not-allowed"
             >
               <div className="text-5xl mb-4">🔑</div>
               <div className="text-brand font-display text-xs tracking-widest uppercase mb-2">I am a</div>
@@ -80,9 +80,8 @@ export default function RoleSelect() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 Work through lessons, answer quizzes, earn XP and track your progress.
               </p>
-              <div className="mt-6 flex items-center gap-2 text-brand font-display text-sm font-bold uppercase tracking-wider">
-                Start Training
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <div className="mt-6 flex items-center gap-2 text-gray-500 font-display text-sm font-bold uppercase tracking-wider">
+                Coming Soon
               </div>
             </button>
           </div>
@@ -118,7 +117,7 @@ export default function RoleSelect() {
       </div>
 
       <div className="text-center pb-8 text-gray-500 text-xs">
-        WE'VE GOT THE KEY — AUTO LOCKSMITHS &nbsp;·&nbsp; <span className="text-brand font-bold">v3.5</span>
+        WE'VE GOT THE KEY — AUTO LOCKSMITHS &nbsp;·&nbsp; <span className="text-brand font-bold">v3.6</span>
       </div>
     </div>
   )

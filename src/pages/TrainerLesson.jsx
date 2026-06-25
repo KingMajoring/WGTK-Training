@@ -264,8 +264,9 @@ function QuizSlide({ slide }) {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         {slide.q.options.map((opt, j) => {
-          const isCorrect = selected !== null && j === slide.q.answer
-          const isWrong = selected === j && !correct
+          const isSelected = selected === j
+          const isCorrect = isSelected && correct
+          const isWrong = isSelected && !correct
           return (
             <button
               key={j}

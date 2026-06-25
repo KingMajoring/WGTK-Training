@@ -198,41 +198,6 @@ export const lessons = [
         ],
       },
       {
-        type: 'scenario',
-        quote: '"I\'ve lost my keys — I can\'t find them anywhere."',
-        answer: 'All Keys Lost — ask if they have a spare first. If yes, Spare Key instead.',
-      },
-      {
-        type: 'scenario',
-        quote: '"Can you cut me a key? I just want a copy."',
-        answer: 'Spare Key — confirm they have a working key to copy from.',
-      },
-      {
-        type: 'scenario',
-        quote: '"My key\'s not working — the car won\'t recognise it."',
-        answer: 'Could be a dead remote battery, a damaged transponder, or a deprogrammed key. Ask: does it turn in the lock at all?',
-      },
-      {
-        type: 'scenario',
-        quote: '"Someone\'s stolen my bag — my car keys were in it."',
-        answer: 'Key Deletion (urgent — wipe the stolen key) + All Keys Lost for a new key. Security is the priority.',
-      },
-      {
-        type: 'scenario',
-        quote: '"I\'ve locked my keys in the car."',
-        answer: 'Gain Access — we open the vehicle damage-free. Ask where the car is and whether it\'s a keyless/push-start car.',
-      },
-      {
-        type: 'scenario',
-        quote: '"My key snapped off in the door."',
-        answer: 'Broken Key Extraction — we remove the fragment. Then likely a new key cut and coded too.',
-      },
-      {
-        type: 'scenario',
-        quote: '"The car just won\'t start — the key goes in but nothing happens."',
-        answer: 'Could be ignition barrel failure or steering lock fault (common on VAG group). Ask: does the steering feel locked? Any warning lights?',
-      },
-      {
         type: 'break',
         heading: 'Short Break',
         duration: '5 mins',
@@ -317,6 +282,68 @@ export const lessons = [
   },
   {
     id: 4,
+    title: 'What Customers Say',
+    subtitle: 'Matching what they say to what they need',
+    category: 'Product Knowledge',
+    duration: '20 min',
+    xp: 90,
+    icon: '💬',
+    trainerNotes: [
+      'This lesson directly follows Products & Services — trainees now know the services, this is about connecting customer language to the right one.',
+      'Read each quote out loud. Give the group time to discuss before revealing the answer.',
+      'Encourage debate — there\'s often more than one right answer depending on what follow-up questions reveal.',
+      'Use the debrief to reinforce: the first thing the customer says is rarely the full picture.',
+    ],
+    cheatSheet: [],
+    content: [
+      {
+        type: 'big-question',
+        question: 'A customer calls. They don\'t know what they need — they just know something\'s wrong. How do we figure out the right service?',
+      },
+      {
+        type: 'scenario',
+        quote: '"I\'ve lost my keys — I can\'t find them anywhere."',
+        answer: 'All Keys Lost — but ask if they have a spare first. If yes, Spare Key instead.',
+      },
+      {
+        type: 'scenario',
+        quote: '"Can you cut me a key? I just want a copy."',
+        answer: 'Spare Key — confirm they have a working key to copy from.',
+      },
+      {
+        type: 'scenario',
+        quote: '"My key\'s not working — the car won\'t recognise it."',
+        answer: 'Could be a dead remote battery, a damaged transponder, or a deprogrammed key. Ask: does it turn in the lock at all?',
+      },
+      {
+        type: 'scenario',
+        quote: '"Someone\'s stolen my bag — my car keys were in it."',
+        answer: 'Key Deletion (urgent — wipe the stolen key) + All Keys Lost for a new key. Security is the priority.',
+      },
+      {
+        type: 'scenario',
+        quote: '"I\'ve locked my keys in the car."',
+        answer: 'Gain Access — we open the vehicle damage-free. Ask where the car is and whether it\'s a keyless/push-start car.',
+      },
+      {
+        type: 'scenario',
+        quote: '"My key snapped off in the door."',
+        answer: 'Broken Key Extraction — we remove the fragment. Then likely a new key cut and coded too.',
+      },
+      {
+        type: 'scenario',
+        quote: '"The car just won\'t start — the key goes in but nothing happens."',
+        answer: 'Could be ignition barrel failure or steering lock fault (common on VAG group). Ask: does the steering feel locked? Any warning lights?',
+      },
+      {
+        type: 'big-question',
+        question: 'What\'s the pattern? What do you always need to ask — no matter what the customer says first?',
+      },
+    ],
+    quiz: [],
+  },
+  {
+    id: 6,
     title: 'Meet the Team',
     subtitle: 'Get to know the people around you',
     category: 'Foundation',
@@ -340,7 +367,7 @@ export const lessons = [
     quiz: [],
   },
   {
-    id: 5,
+    id: 7,
     title: 'Call Shadowing',
     subtitle: 'What a real call actually sounds like',
     category: 'Foundation',

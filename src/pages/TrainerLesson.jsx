@@ -40,6 +40,15 @@ function buildSlides(lesson) {
     if (block.type === 'timeline') {
       slides.push({ type: 'timeline', heading: block.heading, events: block.events })
     }
+    if (block.type === 'activity') {
+      slides.push({ type: 'activity', heading: block.heading, instruction: block.instruction, trainerFirst: block.trainerFirst, tip: block.tip })
+    }
+    if (block.type === 'two-col') {
+      slides.push({ type: 'two-col', heading: block.heading, left: block.left, right: block.right })
+    }
+    if (block.type === 'big-question') {
+      slides.push({ type: 'big-question', question: block.question, note: block.note })
+    }
   })
 
   // Cheat sheet slide
@@ -473,6 +482,57 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
         </div>
       )
     }
+
+    case 'activity':
+      return (
+        <div className="max-w-4xl w-full mx-auto slide-up">
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-6">Activity</div>
+          <h2 className="font-display text-6xl font-black uppercase text-white leading-none mb-8">{slide.heading}</h2>
+          <p className="text-white text-3xl leading-snug mb-8">{slide.instruction}</p>
+          <div className="bg-surface-3 border border-brand/30 rounded-2xl px-8 py-5 mb-6">
+            <div className="text-brand font-display text-xs uppercase tracking-widest mb-2">Trainer goes first</div>
+            <p className="text-gray-300 text-xl">{slide.trainerFirst}</p>
+          </div>
+          {slide.tip && (
+            <div className="text-brand font-display text-sm uppercase tracking-widest">⚡ {slide.tip}</div>
+          )}
+        </div>
+      )
+
+    case 'two-col':
+      return (
+        <div className="max-w-5xl w-full mx-auto slide-up">
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">{slide.heading}</div>
+          <div className="grid grid-cols-2 gap-8">
+            {[slide.left, slide.right].map((col, i) => (
+              <div key={i} className="bg-surface-3 border border-surface-5 rounded-2xl p-8">
+                <div className={`font-display text-2xl font-black uppercase mb-6 ${i === 0 ? 'text-brand' : 'text-white'}`}>{col.label}</div>
+                <ul className="space-y-4">
+                  {col.points.map((pt, j) => (
+                    <li key={j} className="flex items-start gap-4">
+                      <span className="text-brand font-black text-xl flex-shrink-0 mt-0.5">▸</span>
+                      <span className="text-white text-2xl font-display font-bold leading-tight">{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+
+    case 'big-question':
+      return (
+        <div className="max-w-4xl w-full mx-auto slide-up text-center">
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-10">Discussion</div>
+          <p className="font-display text-5xl md:text-6xl font-black uppercase text-white leading-tight mb-10">
+            {slide.question}
+          </p>
+          {slide.note && (
+            <div className="text-brand font-display text-sm uppercase tracking-widest">⚡ {slide.note}</div>
+          )}
+        </div>
+      )
 
     case 'cheatsheet':
       return (

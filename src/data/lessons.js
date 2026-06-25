@@ -98,6 +98,90 @@ export const lessons = [
       },
     ],
   },
+  {
+    id: 2,
+    title: 'Welcome & Introductions',
+    subtitle: 'Setting the tone for the next two weeks',
+    category: 'Foundation',
+    duration: '30 min',
+    xp: 80,
+    icon: '👋',
+    trainerNotes: [
+      'Keep the energy warm and relaxed — this sets the tone for everything that follows.',
+      'Don\'t rush. If they\'re still chatting or settling in, let it happen. Tense people don\'t learn.',
+      'Do the Two Truths and a Lie yourself first — it shows you\'re human and breaks the ice faster.',
+      'When they share their goal, write it down visibly. It tells them you\'re listening and you\'ll hold them to it.',
+    ],
+    cheatSheet: [
+      { label: 'Format', value: 'Informal, interactive, conversation-based' },
+      { label: 'Who delivers', value: 'Any trainer, office manager or senior staff' },
+      { label: 'Materials', value: 'Training rota, names/roles list, notepad' },
+      { label: 'Permission statement', value: 'If you don\'t understand — ask. If you make a mistake — tell us. If you\'re stuck on a call — we help.' },
+      { label: 'Week 1 focus', value: 'Training sessions, shadowing, roleplays' },
+      { label: 'Week 2 focus', value: 'Supported live calls' },
+    ],
+    content: [
+      {
+        type: 'keypoints',
+        heading: 'Warm Welcome',
+        points: [
+          'Offer tea or coffee ☕',
+          'Ask if travel was okay',
+          'Make sure they\'re comfortable',
+        ],
+      },
+      {
+        type: 'activity',
+        heading: 'Two Truths and a Lie',
+        instruction: 'Each person says 3 things about themselves — 2 true, 1 a lie. Everyone else guesses which is the lie.',
+        trainerFirst: 'Trainer goes first. Share: your name, your role, what you do day-to-day, how long you\'ve been at WGTK, and one surprising fact.',
+        tip: 'This kills the new starter awkwardness instantly. Don\'t skip it.',
+      },
+      {
+        type: 'two-col',
+        heading: 'The Next Two Weeks',
+        left: {
+          label: 'Week 1',
+          points: ['Classroom training sessions', 'Shadowing calls', 'Roleplays & practice'],
+        },
+        right: {
+          label: 'Week 2',
+          points: ['Supported live calls', 'Real jobs, real customers', 'We\'re right there with you'],
+        },
+      },
+      {
+        type: 'keypoints',
+        heading: 'What We Promise You',
+        points: [
+          'You will not be thrown in blind',
+          'You will make mistakes — and that\'s normal',
+          'If you\'re stuck on a call, we help',
+        ],
+      },
+      {
+        type: 'big-question',
+        question: 'What\'s one thing you\'re hoping to get good at in this job?',
+        note: 'Write their answers down — it makes them feel heard.',
+      },
+    ],
+    quiz: [
+      {
+        question: 'What is the main purpose of the Welcome & Introductions session?',
+        options: ['To test their product knowledge', 'To make them feel welcomed, relaxed and part of the team', 'To explain the commission structure', 'To set up their computer login'],
+        answer: 1,
+      },
+      {
+        question: 'What does Week 2 of training focus on?',
+        options: ['Classroom sessions only', 'Exams and assessments', 'Supported live calls', 'Solo unsupervised calls'],
+        answer: 2,
+      },
+      {
+        question: 'If a new starter makes a mistake on a call, what should they do?',
+        options: ['Say nothing and hope no one notices', 'Tell the team so they can help', 'Handle it alone to prove themselves', 'Hang up and start again'],
+        answer: 1,
+      },
+    ],
+  },
 ];
 
 export const categories = [...new Set(lessons.map(l => l.category))];

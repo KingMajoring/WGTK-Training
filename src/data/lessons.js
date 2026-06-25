@@ -42,11 +42,6 @@ export const lessons = [
             title: 'What We Expect From You',
             desc: 'Be present, ask questions, and be honest about what you don\'t know. There are no silly questions here — we\'d rather you ask than guess.',
           },
-          {
-            icon: '🔑',
-            title: 'WGTK Business Overview',
-            desc: 'Then we\'ll dive into who we are, what we do, and where we\'ve come from.',
-          },
         ],
       },
       {

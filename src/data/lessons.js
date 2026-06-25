@@ -133,6 +133,142 @@ export const lessons = [
       },
     ],
   },
+  {
+    id: 3,
+    title: 'Products & Services',
+    subtitle: 'What we sell and how to talk about it',
+    category: 'Product Knowledge',
+    duration: '45 min',
+    xp: 120,
+    icon: '🔧',
+    trainerNotes: [
+      'Have physical key samples ready before this session — blade keys, transponder keys, remotes, flip keys, and smart/proximity keys.',
+      'Start with the warm-up discussion — let them talk first, then correct and frame it.',
+      'When you get to key types, pass the samples around. Let them handle them.',
+      'The "Customer Says" table is a great exercise — ask them to guess what the customer actually means before revealing it.',
+      'For scenarios, read them out slowly. Give trainees time to think before they answer.',
+      'Common mistakes — keep it light. These are things everyone gets wrong at first.',
+    ],
+    cheatSheet: [
+      { label: 'Gain Access', value: 'Open vehicle, no key — damage-free' },
+      { label: 'All Keys Lost', value: 'New key cut & coded on-site, no spare needed' },
+      { label: 'Spare Key', value: 'Duplicate cut & programmed, any working key' },
+      { label: 'Key Deletion', value: 'Wipe lost/stolen keys from vehicle memory' },
+      { label: 'Ignition Barrel', value: 'Replace ignition if key lost or barrel damaged' },
+      { label: 'Door Barrel', value: 'Replace door lock cylinder' },
+    ],
+    content: [
+      {
+        type: 'activity',
+        heading: 'What do we actually sell?',
+        instruction: 'Before we dive in — what do you think a customer is getting when they call us? What are we actually providing?',
+      },
+      {
+        type: 'services',
+        heading: 'Gain Access',
+        services: [
+          { name: 'Keys locked inside', desc: 'We open the vehicle damage-free when keys are locked inside — in minutes, no damage to locks or bodywork.' },
+          { name: 'Keys broken in lock', desc: 'We extract broken key fragments from ignitions or door barrels without destroying the lock.' },
+        ],
+      },
+      {
+        type: 'services',
+        heading: 'Replacement Keys',
+        services: [
+          { name: 'All Keys Lost', desc: 'We cut and programme a brand new key on-site — even with no working key to copy from. Vehicle is back on the road the same day.' },
+          { name: 'Spare Key', desc: 'A duplicate key cut and programmed to the vehicle. Ideal as a backup or for fleet management.' },
+          { name: 'Key Deletion', desc: 'Lost or stolen keys are wiped from the vehicle\'s memory so they can never start it again. Often combined with All Keys Lost.' },
+        ],
+      },
+      {
+        type: 'services',
+        heading: 'Security & Lockset',
+        services: [
+          { name: 'Ignition Barrel Replacement', desc: 'We replace the ignition barrel when the lock is damaged or all keys are lost and a barrel replacement is needed.' },
+          { name: 'Door Barrel Replacement', desc: 'We replace door lock cylinders — often needed when a key breaks inside or the barrel is worn.' },
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'Key Types',
+        points: [
+          'Blade Key — traditional cut key, older vehicles, no chip',
+          'Transponder Key — blade + chip inside, must be coded to vehicle immobiliser',
+          'Remote Key — transponder + remote locking buttons combined',
+          'Flip / Folding Key — blade folds into a remote fob housing',
+          'Smart Key / Proximity Key — no blade, push-button start, must be near vehicle to start',
+        ],
+      },
+      {
+        type: 'table',
+        heading: 'What the Customer Says vs What They Mean',
+        rows: [
+          { says: '"I\'ve lost my keys"', means: 'Could be all keys lost, or just one — always ask if they have a spare', ask: '"Do you have any other keys for the vehicle?"' },
+          { says: '"Can you cut me a key?"', means: 'They want a spare — but check what they currently have', ask: '"How many keys do you currently have for the car?"' },
+          { says: '"My key\'s not working"', means: 'Could be battery, could be damaged transponder, could be deprogrammed', ask: '"Does the key turn in the lock? Does the car recognise it at all?"' },
+          { says: '"The key\'s snapped in the door"', means: 'Broken key extraction + possibly a new key too', ask: '"Is any part of the key still in the lock? Can you still get into the car?"' },
+          { says: '"Someone\'s nicked my keys"', means: 'Security risk — they likely need key deletion + new key', ask: '"Is the car at risk? Do you want us to wipe the old key from the system?"' },
+        ],
+      },
+      {
+        type: 'break',
+        heading: 'Short Break',
+        duration: '5 mins',
+      },
+      {
+        type: 'activity',
+        heading: 'Scenario: What would you do?',
+        instruction: 'A customer calls. They say: "I can\'t find my car keys anywhere — I\'ve looked everywhere. I don\'t have a spare." What service do they need, and what questions do you ask first?',
+      },
+      {
+        type: 'activity',
+        heading: 'Scenario: Stolen Key',
+        instruction: 'A customer calls — their bag was stolen with their car keys inside. The car is parked on the street. What do they need, and in what order?',
+      },
+      {
+        type: 'activity',
+        heading: 'Scenario: Broken Key',
+        instruction: 'A customer calls — they broke their key in the driver\'s door lock. The other half is still in the lock. What services might they need from us?',
+      },
+      {
+        type: 'activity',
+        heading: 'Scenario: Fleet Manager',
+        instruction: 'A fleet manager calls. They have a company van — driver left the job last week and kept the key. The van still runs on the old key. What do they need?',
+      },
+      {
+        type: 'activity',
+        heading: 'Scenario: Locked Out',
+        instruction: 'A customer calls — keys on the seat, car locked, running. What\'s the service? What do you need from them to book it in?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'Common Mistakes',
+        points: [
+          'Assuming "lost keys" always means All Keys Lost — always ask about spares first',
+          'Forgetting to mention key deletion when keys are stolen',
+          'Calling it a "remote" when it\'s a smart key — customers notice',
+          'Not asking what year / make / model — price and feasibility depend on it',
+        ],
+      },
+    ],
+    quiz: [
+      {
+        question: 'A customer has lost ALL their keys with no spare. What service do they need?',
+        options: ['Spare Key', 'Gain Access', 'All Keys Lost', 'Key Deletion'],
+        answer: 2,
+      },
+      {
+        question: 'What should you always ask when a customer says their keys have been stolen?',
+        options: ['What colour is the car?', 'Do they want key deletion to wipe the stolen key?', 'Can they get a spare from the dealer?', 'How old is the vehicle?'],
+        answer: 1,
+      },
+      {
+        question: 'A smart key / proximity key has no blade. What does the car use instead to verify it?',
+        options: ['A PIN code entered by the driver', 'A radio signal — the key just needs to be near the car', 'The key must be inserted into a slot', 'Manual door lock only'],
+        answer: 1,
+      },
+    ],
+  },
 ];
 
 export const categories = [...new Set(lessons.map(l => l.category))];

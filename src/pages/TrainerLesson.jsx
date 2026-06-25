@@ -46,6 +46,12 @@ function buildSlides(lesson) {
     if (block.type === 'big-question') {
       slides.push({ type: 'big-question', question: block.question, note: block.note })
     }
+    if (block.type === 'table') {
+      slides.push({ type: 'table', heading: block.heading, rows: block.rows })
+    }
+    if (block.type === 'break') {
+      slides.push({ type: 'break', heading: block.heading, duration: block.duration })
+    }
   })
 
   // Cheat sheet slide
@@ -80,6 +86,7 @@ export default function TrainerLesson() {
     if (slide?.type === 'services') return slide.services.length * 2 - 1
     if (slide?.type === 'timeline') return slide.events.length - 1
     if (slide?.type === 'agenda') return slide.items.length - 1
+    if (slide?.type === 'table') return slide.rows.length - 1
     return 0
   }
 
@@ -534,6 +541,42 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
               </div>
             ))}
           </div>
+        </div>
+      )
+
+    case 'table': {
+      const visibleRows = slide.rows.slice(0, subStep + 1)
+      return (
+        <div className="max-w-6xl w-full mx-auto slide-up" onClick={e => e.stopPropagation()}>
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-6">{slide.heading}</div>
+          <div className="space-y-3">
+            {/* Header */}
+            <div className="grid grid-cols-3 gap-4 px-4 pb-2">
+              <div className="text-gray-500 font-display text-xs uppercase tracking-widest">Customer Says</div>
+              <div className="text-gray-500 font-display text-xs uppercase tracking-widest">What They Mean</div>
+              <div className="text-gray-500 font-display text-xs uppercase tracking-widest">What to Ask</div>
+            </div>
+            {visibleRows.map((row, i) => (
+              <div key={i} className="grid grid-cols-3 gap-4 bg-surface-3 border border-surface-5 rounded-xl px-4 py-4 slide-up">
+                <div className="text-brand font-display text-lg font-bold leading-snug">{row.says}</div>
+                <div className="text-white text-base leading-snug">{row.means}</div>
+                <div className="text-gray-300 text-base italic leading-snug">{row.ask}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 text-gray-600 text-sm font-display uppercase tracking-wider">
+            {subStep < slide.rows.length - 1 ? 'Click or → to reveal next' : ''}
+          </div>
+        </div>
+      )
+    }
+
+    case 'break':
+      return (
+        <div className="text-center max-w-2xl mx-auto slide-up">
+          <div className="text-8xl mb-8">☕</div>
+          <div className="text-brand font-display text-lg tracking-widest uppercase mb-4">{slide.duration}</div>
+          <h2 className="font-display text-7xl font-black uppercase text-white leading-none">{slide.heading}</h2>
         </div>
       )
 

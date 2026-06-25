@@ -314,8 +314,122 @@ export const lessons = [
       },
     ],
   },
-];
-
-export const categories = [...new Set(lessons.map(l => l.category))];
+  {
+    id: 4,
+    title: 'Information Gathering',
+    subtitle: 'Ask the right questions, get the job right',
+    category: 'Sales Skills',
+    duration: '30 min',
+    xp: 100,
+    icon: '📋',
+    trainerNotes: [
+      'Open with the stat — "9 times out of 10 a job goes wrong, it\'s because something wasn\'t asked or written down properly." Let that land.',
+      'Let trainees answer the opener freely. Don\'t correct yet — just capture answers on the whiteboard.',
+      'Core checklist — work through each category. Don\'t rush. Ask them why each one matters before revealing.',
+      'Phrasing examples — read the bad version, let them feel how it sounds, then reveal the better version.',
+      'ROLEPLAY: One trainee plays the customer, one plays the call handler. Trainer gives the "customer" a scenario card (privately) with deliberately incomplete info. The "call handler" must pull all 6 categories out of them. Swap pairs after each round.',
+      'Wrap with the closer line — "The skill is pulling the right info out of them calmly." Ask: what was the hardest bit to remember to ask?',
+    ],
+    cheatSheet: [
+      { label: 'Customer', value: 'Name + contact number' },
+      { label: 'Location', value: 'Full postcode + where the vehicle is' },
+      { label: 'Vehicle', value: 'Make, model, year / reg' },
+      { label: 'Key Situation', value: 'Lost / locked in / spare / broken' },
+      { label: 'Access', value: 'Can the engineer reach the car safely?' },
+      { label: 'Urgency', value: 'Stranded now or flexible?' },
+    ],
+    content: [
+      {
+        type: 'big-question',
+        question: 'What do you think is the most common bit of information people forget to ask?',
+      },
+      {
+        type: 'intro',
+        text: '"If a job goes wrong, 9 times out of 10 it\'s because something wasn\'t asked — or wasn\'t written down properly."',
+      },
+      {
+        type: 'services',
+        heading: 'The Must-Have Information — Every Call',
+        services: [
+          { name: 'Customer', desc: 'Full name and a contact number. If we lose the call, can we get back to them?' },
+          { name: 'Location', desc: 'Full postcode and exactly where the vehicle is — a car park, a street, a driveway. Postcodes get misheard.' },
+          { name: 'Vehicle', desc: 'Make, model, and year or reg. Wrong vehicle info means the engineer arrives with the wrong parts.' },
+          { name: 'Key Situation', desc: 'Locked in? All keys lost? Spare available? Key broken or damaged? This changes the job type and price.' },
+          { name: 'Access', desc: 'Can the engineer physically get to the car? Is it in a safe location — not a live lane or locked car park?' },
+          { name: 'Urgency', desc: 'Are they stranded right now, or is it flexible? Affects how we prioritise and what we promise.' },
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'You don\'t move on until these are clear.',
+        points: [
+          'Every single call — no exceptions',
+          'Missing one can mean a failed job, a re-attend, or a refund',
+          'It\'s not about being robotic — it\'s about being thorough',
+        ],
+      },
+      {
+        type: 'two-col',
+        heading: 'Asking Without Sounding Scripted',
+        left: {
+          label: 'Don\'t say',
+          points: [
+            '"Can I take a postcode please?"',
+            '"Is it a proxy key?"',
+            '"Is the vehicle accessible?"',
+          ],
+        },
+        right: {
+          label: 'Say this instead',
+          points: [
+            '"Can I confirm the postcode of where the car is located?"',
+            '"How do you start the car — push a button, or turn a key?"',
+            '"Can the engineer get to the car easily?"',
+          ],
+        },
+      },
+      {
+        type: 'activity',
+        heading: 'Roleplay — Take the Call',
+        instruction: 'One of you is the customer, one is handling the call. Customer: give your info naturally — don\'t make it easy. Handler: get all 6 categories before the call ends.',
+      },
+      {
+        type: 'big-question',
+        question: 'What was missing? What was assumed? What should have been confirmed?',
+      },
+      {
+        type: 'intro',
+        text: '"That\'s exactly what real customers are like. They don\'t give you the details in order. The skill is pulling the right information out of them — calmly."',
+      },
+    ],
+    quiz: [
+      {
+        question: 'A customer calls and says "I\'ve lost my keys." What\'s the first thing you confirm?',
+        options: ['The vehicle make and model', 'Whether they have any spare keys', 'Their name and number', 'The postcode'],
+        answer: 1,
+      },
+      {
+        question: 'Why do we confirm make, model AND year — not just the reg?',
+        options: [
+          'We need it for the invoice',
+          'The customer might give the wrong reg or we might mishear it',
+          'The DVLA requires it',
+          'It\'s just company policy',
+        ],
+        answer: 1,
+      },
+      {
+        question: 'A customer says "the car\'s just down the road." What should you do?',
+        options: [
+          'Accept it — they know where it is',
+          'Ask for the full postcode and exact location',
+          'Look it up on Google Maps',
+          'Send the engineer and let them find it',
+        ],
+        answer: 1,
+      },
+    ],
+  },
+]; = [...new Set(lessons.map(l => l.category))];
 
 export const getLessonById = (id) => lessons.find(l => l.id === parseInt(id));

@@ -360,8 +360,7 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           <p className="text-gray-400 text-2xl mb-8">{slide.lesson.subtitle}</p>
           <div className="flex justify-center gap-8 text-gray-500 font-display text-sm uppercase tracking-wider">
             <span>⏱ {slide.lesson.duration}</span>
-            <span>⚡ {slide.lesson.xp} XP</span>
-            <span>❓ {slide.lesson.quiz.length} quiz questions</span>
+            {slide.lesson.quiz.length > 0 && <span>❓ {slide.lesson.quiz.length} quiz questions</span>}
           </div>
         </div>
       )
@@ -549,9 +548,7 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
           <h1 className="font-display text-6xl font-black uppercase text-white leading-none mb-4">
             {slide.lesson.title}
           </h1>
-          <p className="text-gray-400 text-xl mb-10">
-            Trainees: complete the quiz in the Training Hub to earn ⚡{slide.lesson.xp} XP
-          </p>
+          <div className="mb-10" />
           <div className="flex justify-center gap-4">
             {onPrevLesson && (
               <button

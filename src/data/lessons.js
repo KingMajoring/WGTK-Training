@@ -175,9 +175,16 @@ export const lessons = [
         instruction: 'How do you think we open a car when the keys are locked inside?',
       },
       {
-        type: 'activity',
+        type: 'services',
         heading: 'Key Types',
-        instruction: 'Can you name the different types of keys we might be asked to replace?',
+        services: [
+          { name: 'Fixed Blade', desc: 'Traditional cut key — no electronics. Older vehicles only. Rare now but still out there.' },
+          { name: 'Transponder', desc: 'A blade key with a chip inside. The chip must be coded to the vehicle\'s immobiliser — cutting the blade alone won\'t start the car.' },
+          { name: 'Flip Key', desc: 'The blade folds into a remote fob. Press the button and the blade flips out. Very common on European vehicles.' },
+          { name: 'Fixed Remote', desc: 'Blade and remote buttons in one solid unit — no folding. Cut the blade and programme the remote separately.' },
+          { name: 'Dash Insert', desc: 'A slim key card or fob that slides into a slot in the dashboard. The car reads the fob and allows push-button start.' },
+          { name: 'Proximity / Smart Key', desc: 'No blade at all. Just needs to be near the car — push-button start. Most modern vehicles. Also the most complex to programme.' },
+        ],
       },
       {
         type: 'services',

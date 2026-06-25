@@ -339,6 +339,82 @@ export const lessons = [
     ],
     quiz: [],
   },
+  {
+    id: 5,
+    title: 'Call Shadowing',
+    subtitle: 'What a real call actually sounds like',
+    category: 'Foundation',
+    duration: '45 min',
+    xp: 80,
+    icon: '🎧',
+    trainerNotes: [
+      'Print one observation sheet per trainee before the session.',
+      'Put the call on speaker in the room — aim for 2–3 calls of different types (simple, complicated, awkward customer).',
+      'Let trainees fill in their sheet silently during the call. Don\'t talk over it.',
+      'Don\'t analyse mid-call — let it play out fully, then debrief together.',
+      'If a call is short or straightforward, that\'s fine — talk about what was good and what they noticed.',
+      'Repeat the debrief slides for each call you listen to.',
+    ],
+    cheatSheet: [],
+    content: [
+      {
+        type: 'big-question',
+        question: 'What do you think a real customer call actually sounds like?',
+      },
+      {
+        type: 'keypoints',
+        heading: 'What to Listen Out For',
+        points: [
+          'How does the handler open the call and introduce WGTK?',
+          'Which questions do they ask — and in what order?',
+          'How do they handle it when the customer is unclear or gives the wrong info?',
+          'When do they identify the service — and how do they explain it?',
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'What Calls Are Really Like',
+        points: [
+          'Customers don\'t give information in a logical order',
+          'Some calls are 2 minutes, some are 15 — you don\'t always control that',
+          'Background noise, bad signal, strong accents — all real things',
+          'Customers can be stressed, emotional, or in a rush — and that\'s normal',
+        ],
+      },
+      {
+        type: 'keypoints',
+        heading: 'What Customers Are Like',
+        points: [
+          'Stressed — often stuck somewhere, late, or worried',
+          'Vague — they don\'t always know the right words for what\'s wrong',
+          'Impatient — they want an answer fast, not a form-filling exercise',
+          'Occasionally difficult — stay calm, stay professional, move forward',
+        ],
+      },
+      {
+        type: 'activity',
+        heading: 'Listen In',
+        instruction: 'We\'re going to listen to live calls together in the room. Fill in your observation sheet as you listen — we\'ll go through it together after.',
+      },
+      {
+        type: 'big-question',
+        question: 'What did the handler do well?',
+      },
+      {
+        type: 'big-question',
+        question: 'Was there any information that wasn\'t gathered — or that you\'d have asked differently?',
+      },
+      {
+        type: 'big-question',
+        question: 'How did the customer sound — and how did the handler respond to that?',
+      },
+      {
+        type: 'big-question',
+        question: 'What\'s one thing you\'d take into your own calls from what you just heard?',
+      },
+    ],
+    quiz: [],
+  },
 ];
 
 export const categories = [...new Set(lessons.map(l => l.category))];

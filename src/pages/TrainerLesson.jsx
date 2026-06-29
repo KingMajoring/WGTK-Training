@@ -61,6 +61,9 @@ function buildSlides(lesson) {
     if (block.type === 'break') {
       slides.push({ type: 'break', heading: block.heading, duration: block.duration })
     }
+    if (block.type === 'category-intro') {
+      slides.push({ type: 'category-intro', label: block.label, icon: block.icon, color: block.color })
+    }
   })
 
   // Cheat sheet slide

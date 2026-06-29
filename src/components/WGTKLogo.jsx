@@ -7,7 +7,7 @@ export default function WGTKLogo({ size = 'md', className = '' }) {
   }
   return (
     <img
-      src="/WGTK-Training/logo-wgt.png"
+      src="/WGTK-Training/wgtklogo.png"
       alt="We've Got The Key — Auto Locksmiths"
       className={`${sizes[size]} h-auto object-contain ${className}`}
       style={{ mixBlendMode: 'screen' }}

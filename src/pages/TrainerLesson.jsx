@@ -195,8 +195,8 @@ export default function TrainerLesson() {
         onClick={next}
       >
         {/* Logo watermark — bottom right every slide */}
-        <div className="absolute bottom-4 right-6 opacity-60 pointer-events-none">
-          <WGTKLogo size="sm" />
+        <div className="absolute bottom-6 right-8 opacity-80 pointer-events-none">
+          <WGTKLogo size="md" />
         </div>
         <SlideContent
           key={current}

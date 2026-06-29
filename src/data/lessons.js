@@ -19,6 +19,9 @@ export const lessons = [
     cheatSheet: [],
     content: [
       {
+        type: 'welcome',
+      },
+      {
         type: 'activity',
         heading: 'Two Truths and a Lie',
         instruction: 'Each person says 3 things about themselves — 2 true, 1 a lie. Everyone else guesses which is the lie.',

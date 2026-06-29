@@ -64,6 +64,9 @@ function buildSlides(lesson) {
     if (block.type === 'category-intro') {
       slides.push({ type: 'category-intro', label: block.label, icon: block.icon, color: block.color })
     }
+    if (block.type === 'welcome') {
+      slides.push({ type: 'welcome' })
+    }
   })
 
   // Cheat sheet slide
@@ -662,6 +665,27 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      )
+
+    case 'welcome':
+      return (
+        <div className="flex flex-col items-center justify-center text-center w-full h-full" style={{ minHeight: '65vh' }}>
+          <div className="mb-10 slide-up">
+            <img
+              src="/WGTK-Training/wgtklogo.png"
+              alt="We've Got The Key"
+              className="w-[480px] max-w-[80vw] h-auto object-contain mx-auto"
+              style={{ mixBlendMode: 'screen' }}
+            />
+          </div>
+          <div className="slide-up" style={{ animationDelay: '150ms' }}>
+            <p className="text-brand font-display text-xl tracking-widest uppercase mb-4">Welcome to</p>
+            <h1 className="font-display font-black uppercase text-white leading-none" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
+              WE'VE GOT<br />THE KEY
+            </h1>
+            <p className="text-gray-400 text-xl mt-6">Auto Locksmiths — New Starter Training</p>
           </div>
         </div>
       )

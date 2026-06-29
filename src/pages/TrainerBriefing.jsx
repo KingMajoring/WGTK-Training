@@ -50,6 +50,31 @@ const items = [
 export default function TrainerBriefing() {
   const navigate = useNavigate()
   const [active, setActive] = useState(null)
+  const [welcomed, setWelcomed] = useState(false)
+
+  if (!welcomed) {
+    return (
+      <div
+        className="min-h-screen bg-surface-1 flex flex-col items-center justify-center cursor-pointer select-none"
+        onClick={() => setWelcomed(true)}
+      >
+        <div className="flex flex-col items-center text-center slide-up">
+          <img
+            src="/WGTK-Training/wgtklogo.png"
+            alt="We've Got The Key"
+            className="w-[520px] max-w-[80vw] h-auto object-contain mb-10"
+            style={{ mixBlendMode: 'screen' }}
+          />
+          <p className="text-brand font-display text-xl tracking-widest uppercase mb-4">Welcome to</p>
+          <h1 className="font-display font-black uppercase text-white leading-none" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
+            WE'VE GOT<br />THE KEY
+          </h1>
+          <p className="text-gray-400 text-xl mt-6">New Starter Training</p>
+          <p className="text-gray-600 text-sm mt-16 font-display uppercase tracking-widest">Click anywhere to continue</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-surface-1 flex flex-col">

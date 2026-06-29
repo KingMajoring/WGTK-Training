@@ -165,6 +165,12 @@ export const lessons = [
         question: 'Who do you think actually calls us — and why?',
       },
       {
+        type: 'category-intro',
+        label: 'RETAIL',
+        icon: '🛒',
+        color: '#3B82F6',
+      },
+      {
         type: 'services',
         heading: 'Retail',
         services: [
@@ -179,6 +185,12 @@ export const lessons = [
         text: 'Every retail enquiry costs us money to generate. Google Ads are expensive. We cannot afford to waste a single call.',
       },
       {
+        type: 'category-intro',
+        label: 'TRADE',
+        icon: '🏭',
+        color: '#22C55E',
+      },
+      {
         type: 'services',
         heading: 'Trade — Three Types',
         services: [
@@ -188,6 +200,12 @@ export const lessons = [
         ],
       },
       {
+        type: 'category-intro',
+        label: 'INSURANCE',
+        icon: '🛡️',
+        color: '#A855F7',
+      },
+      {
         type: 'services',
         heading: 'Insurance',
         services: [
@@ -195,6 +213,12 @@ export const lessons = [
           { name: 'One-Stop Shop', desc: 'Rather than managing dozens of local locksmiths across the UK, insurers use us as a single supplier. One relationship, national coverage.' },
           { name: 'MI Reporting', desc: 'Insurers are data-heavy. They need detailed management information on every job — response times, completion rates, costs. We\'ve built our systems around this. A local locksmith can\'t provide it.' },
         ],
+      },
+      {
+        type: 'category-intro',
+        label: 'REFERRAL',
+        icon: '🤝',
+        color: '#F15A22',
       },
       {
         type: 'services',

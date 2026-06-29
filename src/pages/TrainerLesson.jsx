@@ -663,6 +663,33 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
         </div>
       )
 
+    case 'category-intro':
+      return (
+        <div className="flex flex-col items-center justify-center text-center w-full h-full select-none" style={{ minHeight: '60vh' }}>
+          <div
+            className="font-display font-black uppercase leading-none slide-up"
+            style={{
+              fontSize: 'clamp(6rem, 18vw, 16rem)',
+              color: slide.color,
+              textShadow: `0 0 120px ${slide.color}55`,
+              letterSpacing: '-0.02em',
+              animation: 'flyIn 0.5s cubic-bezier(0.22,1,0.36,1) both',
+            }}
+          >
+            {slide.label}
+          </div>
+          <div className="text-8xl mt-6" style={{ animation: 'flyIn 0.5s 0.15s cubic-bezier(0.22,1,0.36,1) both' }}>
+            {slide.icon}
+          </div>
+          <style>{`
+            @keyframes flyIn {
+              from { opacity: 0; transform: translateY(60px) scale(0.85); }
+              to   { opacity: 1; transform: translateY(0)    scale(1); }
+            }
+          `}</style>
+        </div>
+      )
+
     case 'big-question':
       return (
         <div className="max-w-4xl w-full mx-auto slide-up text-center">

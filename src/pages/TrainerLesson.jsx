@@ -685,7 +685,7 @@ function SlideContent({ slide, subStep, revealed, toggleReveal, lesson, onPrevLe
             <h1 className="font-display font-black uppercase text-white leading-none" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}>
               WE'VE GOT<br />THE KEY
             </h1>
-            <p className="text-gray-400 text-xl mt-6">Auto Locksmiths — New Starter Training</p>
+            <p className="text-gray-400 text-xl mt-6">New Starter Training</p>
           </div>
         </div>
       )

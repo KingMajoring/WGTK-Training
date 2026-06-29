@@ -430,12 +430,12 @@ export const lessons = [
       {
         type: 'flipcards',
         heading: 'Getting the Key Type Right',
-        instruction: 'What questions should we be asking to identify the right key type? Suggest one — trainer will flip the card.',
+        instruction: 'What questions should we be asking to identify the right key type?',
         cards: [
-          { hint: 'Start method', answer: 'How do you start the car — turn a key or push a button?' },
-          { hint: 'Blade or fob', answer: 'Is there a physical blade, or is it just a fob?' },
-          { hint: 'Flip blade', answer: 'Does the blade fold out of the fob, or is it fixed?' },
-          { hint: 'Buttons', answer: 'How many buttons does the key have?' },
+          { hint: 'SM', answer: 'How do you start the car — turn a key or push a button?' },
+          { hint: 'B/F', answer: 'Is there a physical blade, or is it just a fob?' },
+          { hint: 'FB', answer: 'Does the blade fold out of the fob, or is it fixed?' },
+          { hint: 'BTN', answer: 'How many buttons does the key have?' },
         ],
         consequence: 'Get this wrong and the engineer turns up with the wrong parts — wasted visit, unhappy customer.',
       },
